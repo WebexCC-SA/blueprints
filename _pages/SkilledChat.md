@@ -47,7 +47,8 @@ This example will be using a single text skill, single global variable, and a si
 
 #### Add Set Global Variable Node to the flow
 
-### Create Custom Node Integration [(Link to documentation)](https://help.imiconnect.io/docs/custom-nodes){:target="\_blank"}
+### Create Custom Node Integration 
+[(Link to documentation)](https://help.imiconnect.io/docs/custom-nodes){:target="\_blank"}
 
 #### Configure OAuth2
 
@@ -55,9 +56,4 @@ This example will be using a single text skill, single global variable, and a si
 
 
 
-
-<!-- ## Parts 1
-{% include_relative _parts/concept.md %}
-
- -->
 
