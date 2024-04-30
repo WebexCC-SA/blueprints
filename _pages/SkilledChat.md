@@ -28,6 +28,8 @@ This example will be using a single text skill, single global variable, and a si
 
 ## Method
 
+{% include_relative _parts/globalVariable.md reportable="true" %}
+
 ### Create a global variable [(Link to documentation)](https://help.webex.com/en-us/article/n5595zd/Webex-Contact-Center-Setup-and-Administration-Guide#Cisco_Task.dita_1d70cd62-fc99-4e7c-baaf-9d9ab2209846){:target="\_blank"}
 - Type: String
 - Reportable: true
