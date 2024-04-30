@@ -1,16 +1,15 @@
 # Configurations
-title:            Jekyll Gitbook
-longtitle:        Jekyll Gitbook
-author:           HE Tao
-email:            sighingnow@gmail.com
+title:            WxCC Blueprints
+longtitle:        Webex Contact Center Blueprints
+email:            wxcclabs@cisco.com
 description: >
-  Build Jekyll site with the GitBook style.
+  Webex Contact Center Blueprints
 
 version:          1.0
 gitbook_version:  3.2.3
 
-url:              'https://sighingnow.github.io'
-baseurl:          '/jekyll-gitbook'
+url:              'https://webexcc-sa.github.io'
+baseurl:          '/blueprints'
 rss:              RSS
 
 # bootstrap: use the remote theme for the site itself
@@ -19,7 +18,7 @@ remote_theme: sighingnow/jekyll-gitbook
 toc:
   enabled: true
   h_min: 1
-  h_max: 3
+  h_max: 1
 
 # customize the link favicon in header, will be {{site.baseurl}}/{{site.favicon_path}}
 favicon_path:     /assets/gitbook/images/favicon.ico
@@ -54,7 +53,7 @@ collections:
     output: true
     permalink: /:collection/:path/
 
-page_width: 800px
+page_width: 1024px
 
 destination:      ./_site
 incremental:      false
