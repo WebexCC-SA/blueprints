@@ -1,8 +1,3 @@
----
-title: concept page 1
-layout: post
-mermaid: true
----
 
 ## this is from the concept page
 

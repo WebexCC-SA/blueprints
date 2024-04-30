@@ -29,11 +29,3 @@ This example will be using a single text skill, single global variable, and a si
 
 
 
-## direct graph
-  ```mermaid
-graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
-```
