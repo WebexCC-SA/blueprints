@@ -2,6 +2,7 @@
 title: Transfer Skilled Chat to Another Queue
 category: Digital
 layout: post
+mermaid: true
 ---
 
 ## Problem
@@ -25,3 +26,14 @@ This example will be using a single text skill, single global variable, and a si
 
 ## Parts 1
 {% include_relative _parts/concept.md %}
+
+
+
+## direct graph
+  ```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
