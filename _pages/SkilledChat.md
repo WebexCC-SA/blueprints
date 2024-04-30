@@ -24,4 +24,4 @@ This example will be using a single text skill, single global variable, and a si
 
 
 ## Parts 1
-{{ _parts/concept.md  | markdownify }}
+{% include_relative _parts/concept.md %}
