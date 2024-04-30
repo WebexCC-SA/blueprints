@@ -1,6 +1,7 @@
 ---
 title: concept page 1
-
+layout: post
+mermaid: true
 ---
 
 ## this is from the concept page
@@ -8,3 +9,12 @@ title: concept page 1
 - this is just some text
 - playing with the stuff
   
+
+## Tossing in a graph
+  ```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
