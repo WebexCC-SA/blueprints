@@ -4,11 +4,12 @@
 - Agent Viewable: {{include.viewable | "false"}}
 - Agent Editable: {{include.editable | "false"}}
 
-
-<!--{% include_relative _parts/globalVariable.md 
+{% if site.howto %}
+{% include_relative _parts/globalVariable.md 
     reportable="true" 
     viewable="true" 
     editable="true" 
     type="String"
 %}
-  -->
+{% endif %}
+ 
