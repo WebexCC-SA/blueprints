@@ -1,5 +1,8 @@
-### Create a global variable 
+<!-- Global Variable -->
 - [(Link to documentation)](https://help.webex.com/en-us/article/n5595zd/Webex-Contact-Center-Setup-and-Administration-Guide#Cisco_Task.dita_1d70cd62-fc99-4e7c-baaf-9d9ab2209846){:target="\_blank"}
+  {% if include.name %}
+- Name: {{include.name}}
+  {% endif %}
 - Type: {{include.type | "String"}}
 - Default Value: {{include.dValue | escape }}
 - Reportable: {{include.reportable | "false"}}
