@@ -32,27 +32,22 @@ This example will be using a single text skill, single global variable, and a si
     reportable="true" 
     viewable="true" 
     editable="true" 
-    type="String"
+    type="String"  
 %}
-
+- extra item in main blueprint
 
 
 ### Create a Text Skill
 
-### Create a Skill Profile
+### Add text skill to a Skill Profile
 
 ### Create 2 chat queues
 
-### Create Chat Flow 
-
-#### Add Set Global Variable Node to the flow
+#### Add Set Global Variable Node to the chat flow
 
 ### Create Custom Node Integration 
-[(Link to documentation)](https://help.imiconnect.io/docs/custom-nodes){:target="\_blank"}
-
-#### Configure OAuth2
-
-#### Configure the request
+- [(Link to documentation)](https://help.imiconnect.io/docs/custom-nodes){:target="\_blank"}
+- 
 
 
 
