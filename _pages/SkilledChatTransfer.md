@@ -52,21 +52,21 @@ This example will be using a single text skill, single global variable, and a si
 ---
 
 ### Create/use 2 chat queues
-{ % include_relative _parts/queue.md 
+{% include_relative _parts/queue.md
   name="existing queue"
   ChType="Chat"
   routeType="Skills Based"
   teams="existing teams"
-% }
+%}
 
 ---
 
-{ % include_relative _parts/queue.md 
+{% include_relative _parts/queue.md
   name="transfer queue"
   ChType="Chat"
   routeType="Skills Based"
   teams="none"
-% }
+%}
 
 ---
 
