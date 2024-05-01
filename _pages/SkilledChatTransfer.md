@@ -46,7 +46,7 @@ This example will be using a single text skill, single global variable, and a si
 
 ---
 
-### Add text skill to a Skill Profile
+### Add text skill to the appropriate Skill Profile(s)
 - [(Link to documentation)](https://help.webex.com/en-us/article/n5595zd/Webex-Contact-Center-Setup-and-Administration-Guide#Cisco_Generic_Topic.dita_886a3ba6-94ee-447c-bee7-fe4dc369131d){:target="\_blank"}
 
 ---
@@ -71,15 +71,39 @@ This example will be using a single text skill, single global variable, and a si
 ---
 
 #### Add Set Global Variable Node to the Chat Flow
-- img
-- 
+<img src="{{site.baseurl}}/assets/images/SkilledChatTransfer/Insert_Set_Variable.jpg"> 
+- Select global variable you created in the previous steps
+- Do not set a default value 
 
 
 ---
 
 ### Create Custom Node Integration 
 - [(Link to documentation)](https://help.imiconnect.io/docs/custom-nodes){:target="\_blank"}
-- 
+- Configure OAuth2
+- Request Details
+  - Type: Post
+  - Resource URL: `https://api.wxcc-us1.cisco.com/search`
+  - Body: 
+    <textarea spellcheck="false" cols="70" rows="5" >{"query": "{task(from:\"$(param3)\" to:\"$(param2)\" timeComparator:createdTime filter:{id:{equals:\"$(param1)\"}}){tasks{id lastQueue{name}stringGlobalVariables(name:\"$(param4)\"){name value}}}}"}</textarea>
+  - Parameters:
+    |Parameter|Value Type|Field Name/Value|
+    |:-:|:-:|:-:|
+    |param3|Dynamic|from|
+    |param2|Dynamic|to|
+    |param1|Dynamic|taskID|
+    |param4|Dynamic|gvName|
+- Response:
+  - Configure Node Events:
+    |Node Event|Body|Condition|Value|Node Edge|
+    |:-:|:-:|:-:|:-:|:-:|
+    |Success|HTTP Status|equals|200|Success|
+    |Error|HTTP Status|not equals|200|Error|
+  - Response Object
+    - Parameter Name: skill
+    - Body: Body
+    - Response Path: `$.data.task.tasks[0].stringGlobalVariables.value`
+
 
 ---
 
@@ -94,6 +118,7 @@ This example will be using a single text skill, single global variable, and a si
 - Add the Custom node
 - Add a Queue Contact node
 
+---
 
 ## Testing
 
