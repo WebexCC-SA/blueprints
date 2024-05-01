@@ -120,10 +120,26 @@ This example will be using a single text skill, single global variable, and a si
 
   <img src="{{site.baseurl}}/assets/images/SkilledChatTransfer/Task_Modified_Flow.jpg">
 
-- Add variables to the Evaluate node
-- Add a Wait node
+- Add variables to the Evaluate node to create the timestamps for the Search API
+    <textarea spellcheck="false" cols="100" rows="3" >var now = Date.now().toString();
+  var tenMin = (Date.now() - 600000).toString();</textarea>
+- Add a Delay node
+  - Wait 2 seconds
 - Add the Custom node
-- Add a Queue Contact node
+  - Method Name: The method you created above
+  - From: $(tenMin)
+  - To: $(now)
+  - TaskID: $(n2.webex.ID)  
+- Add a Queue Task node
+  - Task ID: $(n2.webex.ID)
+  - Conversation ID: $(MediaResourceId)
+  - Queue details:
+    - Queue name: existing queue
+  - Skill settings:
+    - Skill: Text Skill that you created above
+    - Condition: IS
+    - <details><summary>Skill Value: $(n####.skill)</summary><img src="{{site.baseurl}}/assets/images/SkilledChatTransfer/cNodeSkill.jpg"></details>
+  
 
 ---
 
