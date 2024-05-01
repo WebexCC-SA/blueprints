@@ -5,6 +5,7 @@
 - Reportable: {{include.reportable | "false"}}
 - Agent Viewable: {{include.viewable | "false"}}
 - Agent Editable: {{include.editable | "false"}}
+
 ---
 
 {% if site.howto %}
