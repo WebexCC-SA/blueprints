@@ -6,7 +6,6 @@
 - Agent Viewable: {{include.viewable | "false"}}
 - Agent Editable: {{include.editable | "false"}}
 
----
 
 {% if site.howto %}
 {% include_relative _parts/globalVariable.md 
