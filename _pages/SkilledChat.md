@@ -50,6 +50,7 @@ This example will be using a single text skill, single global variable, and a si
 - [(Link to documentation)](https://help.imiconnect.io/docs/custom-nodes){:target="\_blank"}
 - 
 
+### Flow Thing
 
-
+{% include_relative _parts/concept.md %}
 
