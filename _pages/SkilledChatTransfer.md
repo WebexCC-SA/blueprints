@@ -28,29 +28,72 @@ This example will be using a single text skill, single global variable, and a si
 
 ## Method
 
+### Create a Global Variable
 {% include_relative _parts/globalVariable.md 
     reportable="true" 
     viewable="true" 
     editable="true" 
     type="String"  
-%}
-- extra item in main blueprint
+    %}
 
 ---
 
 ### Create a Text Skill
+{% include_relative _parts/globalVariable.md 
+    name="TransferSkill"
+    type="Text"
+%}
+
+---
 
 ### Add text skill to a Skill Profile
+- [(Link to documentation)](https://help.webex.com/en-us/article/n5595zd/Webex-Contact-Center-Setup-and-Administration-Guide#Cisco_Generic_Topic.dita_886a3ba6-94ee-447c-bee7-fe4dc369131d){:target="\_blank"}
 
-### Create 2 chat queues
+---
 
-#### Add Set Global Variable Node to the chat flow
+### Create/use 2 chat queues
+{ % include_relative queue.md 
+  name="existing queue"
+  ChType="Chat"
+  routeType="Skills Based"
+  teams="existing teams"
+% }
+
+
+{ % include_relative queue.md 
+  name="transfer queue"
+  ChType="Chat"
+  routeType="Skills Based"
+  teams="none"
+% }
+
+---
+
+#### Add Set Global Variable Node to the Chat Flow
+- img
+- 
+
+
+---
 
 ### Create Custom Node Integration 
 - [(Link to documentation)](https://help.imiconnect.io/docs/custom-nodes){:target="\_blank"}
 - 
 
-### Flow Thing
+---
 
-{% include_relative _parts/concept.md %}
+
+### Import and edit the Digital Task Modified Flow
+- Import the Digital Task Modified Flow from [github](https://github.com/CiscoDevNet/webexcc-digital-channels){:target="\_blank"}
+- Add variables to the Evaluate node
+- Add a Wait node
+- Add the Custom node
+- Add a Queue Contact node
+
+
+## Testing
+
+### Setup
+
+### MoP
 
