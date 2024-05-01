@@ -39,7 +39,7 @@ This example will be using a single text skill, single global variable, and a si
 ---
 
 ### Create a Text Skill
-{% include_relative _parts/globalVariable.md 
+{% include_relative _parts/skill.md 
     name="TransferSkill"
     type="Text"
 %}
@@ -52,7 +52,7 @@ This example will be using a single text skill, single global variable, and a si
 ---
 
 ### Create/use 2 chat queues
-{ % include_relative queue.md 
+{ % include_relative _parts/queue.md 
   name="existing queue"
   ChType="Chat"
   routeType="Skills Based"
@@ -60,7 +60,7 @@ This example will be using a single text skill, single global variable, and a si
 % }
 
 
-{ % include_relative queue.md 
+{ % include_relative _parts/queue.md 
   name="transfer queue"
   ChType="Chat"
   routeType="Skills Based"
@@ -85,6 +85,7 @@ This example will be using a single text skill, single global variable, and a si
 
 ### Import and edit the Digital Task Modified Flow
 - Import the Digital Task Modified Flow from [github](https://github.com/CiscoDevNet/webexcc-digital-channels){:target="\_blank"}
+- ![tmFlow]({{site.baseurl}}assets/images/SkilledChatTransfer/Task_Modified_Flow.jpg)
 - Add variables to the Evaluate node
 - Add a Wait node
 - Add the Custom node
