@@ -6,16 +6,20 @@ mermaid: true
 ---
 
 ## Problem
+---
 Skilled Chats which get transferred to another queue keep their skills from the previous queueing event.
 
 ## Solution
+---
 Change the skills when transferring the chat to another queue.
 
 ### Constraints
+---
 This example will be using a single text skill, single global variable, and a single skilled queue for the purpose of simplicity and containment.
 
 
 ## Required Components
+---
 - Reportable, Agent Viewable, and Agent Editable String Global Variable
 - Text Skill for skill assignment
 - 2 chat queues with at least 1 being a skilled queue
@@ -25,6 +29,8 @@ This example will be using a single text skill, single global variable, and a si
   - Search API
 - Digital Task Modified Flow
 
+---
+---
 
 ## Method
 
@@ -89,24 +95,24 @@ This example will be using a single text skill, single global variable, and a si
   - Parameters:
   
     |Parameter|Value Type|Field Name/Value|
-    |---|---|---|
+    |:-:|:-:|:-:|
     |param3|Dynamic|from|
     |param2|Dynamic|to|
     |param1|Dynamic|taskID|
-    |param4|Dynamic|gvName|
+    |param4|Static|gvName|
 
 - Response:
   - Configure Node Events:
   
     |Node Event|Body|Condition|Value|Node Edge|
-    |---|---|---|---|---|
+    |:-:|:-:|:-:|:-:|:-:|
     |Success|HTTP Status|equals|200|Success|
     |Error|HTTP Status|not equals|200|Error|
-    
+
   - Response Object
     - Parameter Name: skill
     - Body: Body
-    - Response Path: <textarea spellcheck="false" cols="100" rows="1" >$.data.task.tasks[0].stringGlobalVariables.value</textarea>
+    - Response Path: <textarea spellcheck="false" cols="100" rows="1">$.data.task.tasks[0].stringGlobalVariables.value</textarea>
 
 
 ---
