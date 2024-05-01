@@ -86,7 +86,9 @@ This example will be using a single text skill, single global variable, and a si
 
 ### Import and edit the Digital Task Modified Flow
 - Import the Digital Task Modified Flow from [github](https://github.com/CiscoDevNet/webexcc-digital-channels){:target="\_blank"}
-- <img src="{{site.baseurl}}/assets/images/SkilledChatTransfer/Task_Modified_Flow.jpg">
+
+  <img src="{{site.baseurl}}/assets/images/SkilledChatTransfer/Task_Modified_Flow.jpg">
+
 - Add variables to the Evaluate node
 - Add a Wait node
 - Add the Custom node

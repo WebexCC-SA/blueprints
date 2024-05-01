@@ -3,11 +3,11 @@
   {% if include.name %}
 - Name: {{include.name}}
   {% endif %}
-- Type: {{include.type | "String"}}
-- Default Value: {{include.dValue | escape }}
-- Reportable: {{include.reportable | "false"}}
-- Agent Viewable: {{include.viewable | "false"}}
-- Agent Editable: {{include.editable | "false"}}
+- Type: {{include.type |default: "String"}}
+- Default Value: {{include.dValue }}
+- Reportable: {{include.reportable | default: false}}
+- Agent Viewable: {{include.viewable |default: false}}
+- Agent Editable: {{include.editable | default: false}}
 
 
 {% if site.howto %}
