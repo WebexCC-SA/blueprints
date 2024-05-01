@@ -36,6 +36,7 @@ This example will be using a single text skill, single global variable, and a si
 %}
 - extra item in main blueprint
 
+---
 
 ### Create a Text Skill
 
