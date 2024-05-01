@@ -83,22 +83,26 @@ This example will be using a single text skill, single global variable, and a si
 - Configure OAuth2
 - Request Details
   - Type: Post
-  - Resource URL: <textarea spellcheck="false" cols="100" rows="1"> https://api.wxcc-us1.cisco.com/search</textarea>
+  - Resource URL: <textarea spellcheck="false" cols="80" rows="1"> https://api.wxcc-us1.cisco.com/search</textarea>
   - Body: 
     <textarea spellcheck="false" cols="100" rows="4" >{"query": "{task(from:\"$(param3)\" to:\"$(param2)\" timeComparator:createdTime filter:{id:{equals:\"$(param1)\"}}){tasks{id lastQueue{name}stringGlobalVariables(name:\"$(param4)\"){name value}}}}"}</textarea>
   - Parameters:
+  
     |Parameter|Value Type|Field Name/Value|
     |---|---|---|
     |param3|Dynamic|from|
     |param2|Dynamic|to|
     |param1|Dynamic|taskID|
     |param4|Dynamic|gvName|
+
 - Response:
   - Configure Node Events:
+  
     |Node Event|Body|Condition|Value|Node Edge|
     |---|---|---|---|---|
     |Success|HTTP Status|equals|200|Success|
     |Error|HTTP Status|not equals|200|Error|
+    
   - Response Object
     - Parameter Name: skill
     - Body: Body
