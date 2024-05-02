@@ -4,6 +4,6 @@
  *   these get simply added to the ones already active in the layout.
  */
 
- .search-results-item{
-    color:unset;
+ #book-search-results .search-results .has-results .search-results-item{
+    color:unset !important;
  }
