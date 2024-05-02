@@ -1,7 +1,9 @@
 ---
 layout: home
-title: Jekyll Gitbook Theme
+title: Webex Contact Center Blueprints
 permalink: /
 ---
 
 # Blueprint POC
+
+{% include_relative search.html %}
