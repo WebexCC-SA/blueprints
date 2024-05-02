@@ -15,6 +15,8 @@ require([
     var $searchTitle;
     var $searchResultsCount;
     var $searchQuery;
+    var $tiles;
+    var $links;
 
     // Throttle search
     function throttle(fn, wait) {
@@ -33,6 +35,8 @@ require([
 
     function displayResults(res) {
         $bookSearchResults.addClass('open');
+        $tiles.addClass("hidden")
+        $links.addClass("hidden")
 
         var noResults = res.count == 0;
         $bookSearchResults.toggleClass('no-results', noResults);
