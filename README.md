@@ -6,3 +6,6 @@ permalink: /
 
 # Blueprint POC
 
+<div id="book-search-input-inside" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
