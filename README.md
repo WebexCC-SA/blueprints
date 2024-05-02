@@ -6,4 +6,3 @@ permalink: /
 
 # Blueprint POC
 
-{% include_relative assets/search.html %}
