@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: search-base
 title: Webex Contact Center Blueprints
 permalink: /
 ---
