@@ -7,10 +7,10 @@ mermaid: true
 
 ## Problem
 
-Skilled Chats which get transferred to another queue keep their skills from the previous queueing event.
+Skilled Chats which get transferred to another queue keep their skills from the previous queueing event.  Need to be able to update the skill when transfer a chat to another queue.
 
 ## Solution
-Change the skills when transferring the chat to another queue.
+Use a Task Modified Flow to evaluate a transferred chat and change the skills of the chat when transferring to a queue.
 
 ### Constraints
 This example will be using a single text skill, single global variable, and a single skilled queue for the purpose of simplicity and containment.
@@ -146,6 +146,17 @@ This example will be using a single text skill, single global variable, and a si
 ## Testing
 
 ### Setup
+- Will need 2 agents which have different values assigned to the new text skill.  Both agents should belong to a team which is assigned to the "existing queue".
+- Agent 1 should be skilled to receive the initial chat from the "existing queue"
+- Agent 2 will need to be assigned a unique value for the new text skill
+
+---
 
 ### MoP
+1. Send a new chat to the queue which Agent 1 is skilled to receive.
+2. After Agent 1 accepts the chat, they will update the global variable created above with the unique text value which Agent 2 has in their text skill.
+3. After saving the change to the global variable, Agent 1 will then transfer the chat to the new queue which does not have a team assigned.
+4. With Agent 2 Available, they will be delivered the chat in the original queue.
+
+---
 
