@@ -17,7 +17,6 @@ permalink: /
 <body>
   <pagetitle>
     <h1>Webex Contact Center Knowledge Hub (beta)</h1>
-
   </pagetitle>
 
 <div id="book-search-input-inside" role="search">
