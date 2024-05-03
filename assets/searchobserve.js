@@ -1,6 +1,6 @@
 targetElement = document.querySelector('#book-search-results');
 
-let callback = function(mutationsList, observer) {
+callback = function(mutationsList, observer) {
     for (const mutation of mutationsList) {
         if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
             if (mutation.target.classList.contains("open")){
@@ -15,9 +15,9 @@ let callback = function(mutationsList, observer) {
     }
 };
 
-let observer = new MutationObserver(callback);
+observer = new MutationObserver(callback);
 
-let config = {
+config = {
     attributes: true,
     attributeOldValue: false,
     attributeFilter: ['class']
