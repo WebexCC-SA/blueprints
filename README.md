@@ -27,5 +27,5 @@ permalink: /
   <k-hub-links l-list="https://webexcc-sa.github.io/links.json"></k-hub-links>
 
 
-
+<script>function(){document.body.querySelector("div").classList.remove("with-summary")}()</script>
 </body>
