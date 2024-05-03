@@ -1,5 +1,5 @@
 ---
-layout: search-base
+layout: kh-bp-search-base
 title: 
 permalink: /
 ---
