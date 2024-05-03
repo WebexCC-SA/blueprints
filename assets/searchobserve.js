@@ -24,4 +24,5 @@ config = {
 };
 
 observer.observe(targetElement, config);
+import("https://webexcc-sa.github.io/dist/hub-widgets/hub-widgets.esm.js") 
 console.log("boop")
