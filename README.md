@@ -14,7 +14,7 @@ permalink: /
   <script defer src= "assets/searchobserve.js"></script>
 <style> .page-inner{max-width:unset;} .hidden{display:none;}#book-search-input-inside{margin-left:auto;margin-right:auto;max-width:50%;}</style>
 
-<body>
+<body onload="boop()">
   <pagetitle>
     <h1>Webex Contact Center Knowledge Hub (beta)</h1>
   </pagetitle>
@@ -26,4 +26,6 @@ permalink: /
   <k-hub-tiles t-list="https://webexcc-sa.github.io/tiles.json,https://webexcc-sa.github.io/tools/advertise/tiles.json"></k-hub-tiles>
   <k-hub-links l-list="https://webexcc-sa.github.io/links.json"></k-hub-links>
 
+
+<script> function boop(){console.log("boop")}</script>
 </body>
