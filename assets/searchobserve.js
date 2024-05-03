@@ -1,4 +1,4 @@
-let targetElement = document.querySelector('#book-search-results');
+targetElement = document.querySelector('#book-search-results');
 
 let callback = function(mutationsList, observer) {
     for (const mutation of mutationsList) {
