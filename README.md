@@ -11,7 +11,7 @@ permalink: /
   <script type="module" src="https://webexcc-sa.github.io/dist/hub-widgets/hub-widgets.esm.js"></script>
   <script nomodule src="https://webexcc-sa.github.io/dist/index.js"></script>
   <link rel="stylesheet" href="https://webexcc-sa.github.io/style.css">
-  <script src= "assets/searchobserve.js">
+  <script defer src= "assets/searchobserve.js"></script>
 <style> .page-inner{max-width:unset;} .hidden{display:none;}#book-search-input-inside{margin-left:auto;margin-right:auto;max-width:50%;}</style>
 
 <body>
