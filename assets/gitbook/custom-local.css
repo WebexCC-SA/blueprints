@@ -7,3 +7,7 @@
  #book-search-results .search-results .has-results .search-results-item{
     color:unset !important;
  }
+ #book-search-input-inside input{
+   padding: 0 0;
+   color: black
+ }
