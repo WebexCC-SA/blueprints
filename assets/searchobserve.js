@@ -24,3 +24,4 @@ const config = {
 };
 
 observer.observe(targetElement, config);
+console.log("boop")
