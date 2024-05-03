@@ -26,6 +26,4 @@ permalink: /
   <k-hub-tiles t-list="https://webexcc-sa.github.io/tiles.json,https://webexcc-sa.github.io/tools/advertise/tiles.json"></k-hub-tiles>
   <k-hub-links l-list="https://webexcc-sa.github.io/links.json"></k-hub-links>
 
-
-<script>(function(){document.body.querySelector("div").classList.remove("with-summary")})()</script>
 </body>
