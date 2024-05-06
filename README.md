@@ -14,6 +14,7 @@ permalink: /
 <div id="book-search-input-inside" role="search">
     <input type="text" placeholder="Type to search" />
 </div>
-<div id="myTOC">
+
+<!-- <div id="myTOC">
 {%- include toc-date.html -%}
-</div>
+</div> -->
