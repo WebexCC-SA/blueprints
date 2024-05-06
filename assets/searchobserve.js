@@ -6,9 +6,9 @@ callback = function(mutationsList, observer) {
             if (mutation.target.classList.contains("open")){
 			// document.querySelector("k-hub-tiles").classList.add("hidden");
 			// document.querySelector("k-hub-links").classList.add("hidden");
-            document.querySelector("#myTOC").classList.add("hidden");
+            document.querySelector("special").classList.add("hidden");
 			}else{
-            document.querySelector("#myTOC").classList.remove("hidden");
+            document.querySelector("special").classList.remove("hidden");
 			// document.querySelector("k-hub-tiles").classList.remove("hidden");
 			// document.querySelector("k-hub-links").classList.remove("hidden");
 			}
