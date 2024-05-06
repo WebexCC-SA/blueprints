@@ -8,20 +8,6 @@ permalink: /
 
 | Article | Created | Last Updated |
 | :-: | :-: | :-: |
-{% for page in site.pages %} | {{ page.title }} | {{ page.created }} | {{page.updated}} | 
+{% for page in site.pages %} | [{{ page.title }}]({{page.url}}) | {{ page.created }} | {{page.updated}} | 
 {% endfor %}
 
-<!-- <table>
-  <tr>
-    <th>Article</th>
-    <th>Created</th>
-    <th>Last Updated</th>
-  </tr>
-   {% for page in collection.pages %}
-   <tr>
-   <th><a href="{{ page.url }}" >{{ page.title }}</th>
-   <th> {{ page.created }} </th>
-   <th>{{page.updated}} </th>
-</tr>
-{% endfor %}
-</table> -->
