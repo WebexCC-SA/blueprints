@@ -8,7 +8,7 @@ permalink: /
 
 | Article | Created | Last Updated |
 | :-----: | :-----: | :----------: |
-{% for page in site.collections.pages %}
+{% for page in site.collections %}
 | <a href={{ page.url }} >{{ page.title }}</a> | {{ page.created }} | {{page.updated}} |
 {% endfor %}
 
