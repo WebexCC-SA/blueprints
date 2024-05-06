@@ -43,7 +43,8 @@ if(JSON.parse(extras).Website == "csamamericas.us.webexconnect.io" || "luminous-
     <textarea spellcheck="false" cols="95" rows="2">"webexcc.github.io" || "luminous-petal-change.glitch.me" || "another.domain.of.your.customer"</textarea>
 
 - Below the "Handle Blank Message Section" and above the "Parse PCI Compliance attachment payload For LiveChat" (approx line 14) add these lines of code, substituting your domain list:
-    <textarea spellcheck="false" cols="95" rows="4">
+    <textarea spellcheck="false" cols="95" rows="5">
+// Multi Domain Chat
 if (JSON.parse(extras).Website == "webexcc.github.io" || "luminous-petal-change.glitch.me") {
     liveChatDomain = JSON.parse(extras).Website
 }</textarea>
@@ -58,6 +59,9 @@ if (JSON.parse(extras).Website == "webexcc.github.io" || "luminous-petal-change.
 ## Testing
 
 ### Setup
-
+- Configure Chat for different domains
+- Add the chat code to websites on the different domains
+- Update the Evaluate node to include the domains as shown above.
 
 ### MoP
+- Start a chat from the different domains and confirm that they are processed the same.
