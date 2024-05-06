@@ -9,5 +9,5 @@ permalink: /
 | Article | Created | Last Updated |
 |:-:|:-:|:-:|
 {% for page in collection.pages %}|
-| <a href="." >{{ page.title | escape }}</a> | {{ page.created }} | {{page.updated}} |
+| <a href="." >{{ page.title }}</a> | {{ page.created }} | {{page.updated}} |
 {% endfor %}
