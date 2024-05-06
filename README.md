@@ -8,6 +8,6 @@ permalink: /
 
 | Article | Created | Last Updated |
 |:-:|:-:|:-:|
-{% for post in collection.posts %}|
-|<a href="." >{{ page.title | escape }}</a>|{{ page.created }}|{{page.updated}}
+{% for page in collection.pages %}|
+| <a href="." >{{ page.title | escape }}</a> | {{ page.created }} | {{page.updated}} |
 {% endfor %}
