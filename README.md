@@ -6,14 +6,8 @@ permalink: /
 
 
 
-<!-- <script defer src= "assets/searchobserve.js"></script> -->
-<!-- <style> .hidden{display:none;}#book-search-input-inside{margin-left:auto;margin-right:auto;max-width:50%;}</style> -->
-
-
-## Test content above 
-
-<!-- <div id="book-search-input-inside" role="search">
-    <input type="text" placeholder="Type to search" />
-</div> -->
-
-## test content below
+| Article | Created | Last Updated |
+|:-:|:-:|:-:|
+{% for post in collection.posts %}|
+|<a href="." >{{ page.title | escape }}</a>|{{ page.created }}|{{page.updated}}
+{% endfor %}
