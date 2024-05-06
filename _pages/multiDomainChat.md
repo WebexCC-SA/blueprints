@@ -1,5 +1,5 @@
 ---
-title: Multiple domains using the same Connect flow for chat.
+title: Multiple domains using the same Connect flow for chat
 category: Digital
 layout: post
 created: 05/06/2023
