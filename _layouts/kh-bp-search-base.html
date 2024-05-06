@@ -12,7 +12,7 @@
     <body>
         <div class="book">
 
-            {%- include toc-date.html -%}
+            <!-- {%- include toc-date.html -%} -->
 
             <div class="book-body">
                 <div class="book-header" role="navigation">
@@ -30,7 +30,7 @@
                 <div class="body-inner">
                     <div class="page-wrapper" tabindex="-1" role="main">
                         <div class="page-inner">
-                            <!-- <section class="normal markdown-section">
+                            <section class="normal markdown-section">
                                 {% if page.title %}
                                     <h1 id="{{ page.id }}">{{ page.title | escape }}</h1>
                                 {% else %}
@@ -38,7 +38,7 @@
                                 {% endif %}
 
                                 <br />
-                            </section> -->
+                            </section>
 
                             {{ content }}
 

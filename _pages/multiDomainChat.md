@@ -17,9 +17,6 @@ Use the Evaluate node to check the originating domain against a list of approved
 
 The reason that Connect confirms the originating domain is for security, which is why we are comparing to a list of domains and not just allowing any domain.
 
-liveChatDomain = JSON.parse(extras).Website
-if(JSON.parse(extras).Website == "csamamericas.us.webexconnect.io" || "luminous-petal-change.glitch.me"){liveChatDomain = JSON.parse(extras).Website }
-
 
 ## Required Components
 - Existing or new Chat flow
