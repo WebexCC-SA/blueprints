@@ -24,6 +24,6 @@ permalink: /
    <th><a href="{{ page.url }}" >{{ page.title }}</th>
    <th> {{ page.created }} </th>
    <th>{{page.updated}} </th>
-< /tr>
+</tr>
 {% endfor %}
 </table>
