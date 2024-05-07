@@ -4,10 +4,10 @@ title: Webex Contact Center Blueprints
 permalink: /
 ---
 
-
+{% assign livepages = site.pages | where: "status", "live" %}
 
 | Article | Created | Last Updated |
 | :-: | :-: | :-: |
-{% for page in site.pages | where: "status", "live" %} | [{{ page.title }}]({{site.baseurl}}{{page.url}}) | {{ page.created }} | {{page.updated}} | 
+{% for page in livepages %} | [{{ page.title }}]({{site.baseurl}}{{page.url}}) | {{ page.created }} | {{page.updated}} | 
 {% endfor %}
 
