@@ -11,3 +11,5 @@ permalink: /
 {% for page in livepages %} | [{{ page.title }}]({{site.baseurl}}{{page.url}}) | {{ page.created }} | {{page.updated}} | 
 {% endfor %}
 
+{{% livepages %}}
+
