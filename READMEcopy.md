@@ -1,7 +1,7 @@
 ---
 layout: kh-bp-search-base
 title: 
-permalink: /
+# permalink: /
 ---
 
 
