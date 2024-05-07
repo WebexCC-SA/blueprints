@@ -4,7 +4,7 @@ title: Webex Contact Center Blueprints
 permalink: /
 ---
 
-{% assign livepages = site.pages | where: "status", "live" | first %}
+{% assign livepages = site.pages | where: "status", "live" %}
 
 | Article | Created | Last Updated |
 | :-: | :-: | :-: |
