@@ -5,7 +5,7 @@ layout: post
 created: 05/06/2023
 updated: 05/07/2023
 mermaid: true
-statue: live
+status: live
 ---
 
 ## Problem
