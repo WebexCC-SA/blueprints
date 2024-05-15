@@ -55,7 +55,7 @@ value="FR"
 
 
 ### Create a Menu to select preferred language
-{% include_relative -parts/menu.md 
+{% include_relative _parts/menu.md 
 prompt="LanguageMenuPrompt"
 link2="link to set lang variable to SP"
 link3="link to set lang variable to FR"
