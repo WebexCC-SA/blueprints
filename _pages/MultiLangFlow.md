@@ -60,7 +60,7 @@ prompt="LanguageMenuPrompt"
 link2="link to set lang variable to SP"
 link3="link to set lang variable to FR"
 noInputLink="loop to node input"
-unmatchedLink="link to first prompt or menu node of the rest of teh flow"
+unmatchedLink="link to first prompt or menu node of the rest of the flow"
 %}
 
 ---
