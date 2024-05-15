@@ -8,12 +8,15 @@
 - Make Prompt Interruptible: {{ include.interruptible | default: "true" }}
 {%- if include.link0 -%}
 - Menu Link 0: {{include.link0}} 
+{% else %}
 {% endif %}
 {%- if include.link1 -%}
 - Menu Link 1: {{include.link1}} 
+{% else %}
 {% endif %}
 {%- if include.link2 -%}
 - Menu Link 2: {{include.link2}}
+{% else %}
 {% endif %}
 {%- if include.link3 -%}
 - Menu Link 3: {{include.link3}} 
