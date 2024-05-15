@@ -1,5 +1,5 @@
 - [(Link to documentation)](https://help.webex.com/en-us/article/n5595zd/Webex-Contact-Center-Setup-and-Administration-Guide#Cisco_Concept.dita_8a8f0369-60b9-4d31-af05-9338f7aa54be)
-<!-- {% if include.prompt -%}
+{% if include.prompt -%}
 - Prompt: {{include.prompt}} 
 {% endif %}
 {%- if include.audioVar -%}
@@ -36,39 +36,6 @@
 {%- if include.link9 -%}
 - Menu Link 9: {{include.link9}} 
 {% endif %}
-- No-Input Timeout (sec): {{ include.noInput | default: "3"}}
-- No-Input Timeout Link: {{ include.noInputLink  }}
-- Unmatched Entry Link: {{ include.unmatchedLink }}
-{% if include.onError -%}
-- Undefined Error: {{include.onError}}
-{% endif %} -->
-{% case include%}
-{% when include.prompt -%}
-- Prompt: {{include.prompt}} 
-{%- when include.audioVar -%}
-- Add Audio Variable: {{ include.audioVar }} 
-- Make Prompt Interruptible: {{ include.interruptible | default: "true" }}
-{%- when include.link0 -%}
-- Menu Link 0: {{include.link0}} 
-{%- when include.link1 -%}
-- Menu Link 1: {{include.link1}} 
-{%- when include.link2 -%}
-- Menu Link 2: {{include.link2}}
-{%- when include.link3 -%}
-- Menu Link 3: {{include.link3}} 
-{%- when include.link4 -%}
-- Menu Link 4: {{include.link4}} 
-{%- when include.link5 -%}
-- Menu Link 5: {{include.link5}} 
-{%- when include.link6 -%}
-- Menu Link 6: {{include.link6}} 
-{%- when include.link7 -%}
-- Menu Link 7: {{include.link7}} 
-{%- when include.link8 -%}
-- Menu Link 8: {{include.link8}} 
-{%- when include.link9 -%}
-- Menu Link 9: {{include.link9}} 
-{% endcase %}
 - No-Input Timeout (sec): {{ include.noInput | default: "3"}}
 - No-Input Timeout Link: {{ include.noInputLink  }}
 - Unmatched Entry Link: {{ include.unmatchedLink }}
