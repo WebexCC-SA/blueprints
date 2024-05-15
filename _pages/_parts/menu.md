@@ -12,10 +12,10 @@
 {%- if include.link1 -%}
 - Menu Link 1: {{include.link1}} 
 {%- endif %}
-{%- if include.link2 -%}
+{% if include.link2 -%}
 - Menu Link 2: {{include.link2}}
 {%- endif %}
-{%- if include.link3 -%}
+{% if include.link3 -%}
 - Menu Link 3: {{include.link3}} 
 {%- endif %}
 {%- if include.link4 -%}
