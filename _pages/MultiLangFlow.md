@@ -45,7 +45,7 @@ value="SP"
 
 ---
 
-### Create Set Variable for Spanish
+### Create Set Variable for French
 {% include_relative _parts/setVariable.md  
 name="lang"
 value="FR"
