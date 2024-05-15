@@ -1,18 +1,18 @@
 - [(Link to documentation)](https://help.webex.com/en-us/article/n5595zd/Webex-Contact-Center-Setup-and-Administration-Guide#Cisco_Concept.dita_8a8f0369-60b9-4d31-af05-9338f7aa54be)
-{% if include.prompt -%}
+{%- if include.prompt -%}
 - Prompt: {{include.prompt}} 
-{%- endif %}
+{% endif %}
 {% if include.audioVar -%}
 - Add Audio Variable: {{ include.audioVar }} 
 {%- endif %}
 - Make Prompt Interruptible: {{ include.interruptible | default: "true" }}
 {% if include.link0 -%}
 - Menu Link 0: {{include.link0}} 
-{%- endif %}
-{% if include.link1 -%}
+{% endif %}
+{%- if include.link1 -%}
 - Menu Link 1: {{include.link1}} 
-{%- endif %}
-{% if include.link2 -%}
+{% endif %}
+{%- if include.link2 -%}
 - Menu Link 2: {{include.link2}}
 {%- endif %}
 {% if include.link3 -%}
