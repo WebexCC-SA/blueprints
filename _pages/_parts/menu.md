@@ -40,5 +40,4 @@
 - No-Input Timeout Link: {{ include.noInputLink  }}
 - Unmatched Entry Link: {{ include.unmatchedLink }}
 {%- if include.onError -%}
-- Undefined Error: {{include.onError}} 
-{%- endif %}
+- Undefined Error: {{include.onError}} {% endif %}
