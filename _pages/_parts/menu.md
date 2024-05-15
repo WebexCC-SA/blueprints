@@ -2,7 +2,7 @@
 {% if include.prompt -%}
 - Prompt: {{include.prompt}} 
 {% endif %}
-{% if include.audioVar -%}
+{%- if include.audioVar -%}
 - Add Audio Variable: {{ include.audioVar }} 
 {% endif %}
 - Make Prompt Interruptible: {{ include.interruptible | default: "true" }}
