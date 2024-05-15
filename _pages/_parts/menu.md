@@ -13,6 +13,6 @@
 - {% if include.link8 %}Menu Link 8: {{include.link8}} {% endif %}
 - {% if include.link9 %}Menu Link 9: {{include.link9}} {% endif %}
 - No-Input Timeout (sec): {{ include.noInput | default: "3"}}
-- No-Input Timeout Link: {{} include.noInputLink  }}
-- Unmatched Entry Link: {{} include.unmatchedLink }}
+- No-Input Timeout Link: {{ include.noInputLink  }}
+- Unmatched Entry Link: {{ include.unmatchedLink }}
 - {% if include.onError %}Undefined Error: {{include.onError}} {% endif %}
