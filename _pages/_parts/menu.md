@@ -1,7 +1,6 @@
 - [(Link to documentation)](https://help.webex.com/en-us/article/n5595zd/Webex-Contact-Center-Setup-and-Administration-Guide#Cisco_Concept.dita_8a8f0369-60b9-4d31-af05-9338f7aa54be)
-<ul>
 {% if include.prompt -%}
-<li>Prompt: {{include.prompt}} </lo>
+<li>Prompt: {{include.prompt}} </li>
 {% endif %}
 {%- if include.audioVar -%}
 <li>Add Audio Variable: {{ include.audioVar }} </li>
@@ -42,4 +41,3 @@
 {% if include.onError -%}
 <li>Undefined Error: {{include.onError}}</li>
 {% endif %}
-</ul>
