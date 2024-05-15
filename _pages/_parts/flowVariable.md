@@ -1,0 +1,6 @@
+- [(Link to documentation)](https://help.webex.com/en-us/article/n5595zd/Webex-Contact-Center-Setup-and-Administration-Guide#Cisco_Concept.dita_79a1216a-2b35-4523-8f68-948c4adf0fbc){:target="\_blank"}
+- Name: {{include.name}}
+- Type: {{include.type |default: "String"}}
+- Default Value: {{include.dValue }}
+- Agent Viewable: {{include.viewable |default: false}}
+- Agent Editable: {{include.editable | default: false}}
