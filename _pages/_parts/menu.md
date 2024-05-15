@@ -1,4 +1,6 @@
-- [(Link to documentation)](https://help.webex.com/en-us/article/n5595zd/Webex-Contact-Center-Setup-and-Administration-Guide#Cisco_Concept.dita_8a8f0369-60b9-4d31-af05-9338f7aa54be)
+<!-- - [(Link to documentation)](https://help.webex.com/en-us/article/n5595zd/Webex-Contact-Center-Setup-and-Administration-Guide#Cisco_Concept.dita_8a8f0369-60b9-4d31-af05-9338f7aa54be) -->
+<ul>
+<li><a href="https://help.webex.com/en-us/article/n5595zd/Webex-Contact-Center-Setup-and-Administration-Guide#Cisco_Concept.dita_8a8f0369-60b9-4d31-af05-9338f7aa54be">(Link to documentation)</a></li>
 {% if include.prompt -%}
 <li>Prompt: {{include.prompt}} </li>
 {% endif %}
@@ -41,3 +43,4 @@
 {% if include.onError -%}
 <li>Undefined Error: {{include.onError}}</li>
 {% endif %}
+</ul>
