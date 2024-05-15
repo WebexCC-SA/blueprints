@@ -2,13 +2,19 @@
 {% if include.prompt -%}
 - Prompt: {{include.prompt}} 
 {%- endif %}
-{% if include.audioVar -%}
+{%- if include.audioVar -%}
 - Add Audio Variable: {{ include.audioVar }} 
 {%- endif %}
 - Make Prompt Interruptible: {{ include.interruptible | default: "true" }}
-{% if include.link0 -%}- Menu Link 0: {{include.link0}} {%- endif %}
-{% if include.link1 -%}- Menu Link 1: {{include.link1}} {%- endif %}
-{% if include.link2 %}- Menu Link 2: {{include.link2}} {% endif %}
+{%- if include.link0 -%}
+- Menu Link 0: {{include.link0}} 
+{%- endif %}
+{%- if include.link1 -%}
+- Menu Link 1: {{include.link1}} 
+{%- endif %}
+{%- if include.link2 %}
+- Menu Link 2: {{include.link2}}
+{%- endif %}
 {% if include.link3 %}- Menu Link 3: {{include.link3}} {% endif %}
 {% if include.link4 %}- Menu Link 4: {{include.link4}} {% endif %}
 {% if include.link5 %}- Menu Link 5: {{include.link5}} {% endif %}
