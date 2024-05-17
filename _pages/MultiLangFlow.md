@@ -66,12 +66,40 @@ unmatchedLink="link to first prompt or menu node of the rest of the flow"
 ---
 
 ### Add a Play Message node 
+<!-- this is just a note!! -->
 {% include_relative _parts/playMessage.md
-a1="welcome_{{lang}}.wav" 
+a1="welcome_\{\{lang\}\}.wav"
+type1="Audio Variable" 
+
 %}
 
 ---
 
+
+
+<!-- Delete any unneeded lines Tab through values Escape brackets \{\{ variable \}\} -->
+{% include_relative _parts/playMessage.md
+
+TTSBool="false"
+connector="name"
+voice="name"
+
+type1="File"
+a1="name of file, variable expression, or TTS"
+
+type2="File"
+a2="name of file, variable expression, or TTS"
+
+type3="File"
+a3="name of file, variable expression, or TTS"
+
+type4="File"
+a4="name of file, variable expression, or TTS"
+
+type5="File"
+a5="name of file, variable expression, or TTS"
+
+%}
 
 ## Testing
 
@@ -79,3 +107,5 @@ a1="welcome_{{lang}}.wav"
 
 
 ### MoP
+
+
