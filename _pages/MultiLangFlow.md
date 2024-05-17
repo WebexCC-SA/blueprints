@@ -65,6 +65,12 @@ unmatchedLink="link to first prompt or menu node of the rest of the flow"
 
 ---
 
+### Add a Play Message node 
+{% include_relative _parts/playMessage.md
+a1="welcome_{{lang}}.wav" 
+%}
+
+---
 
 
 ## Testing
