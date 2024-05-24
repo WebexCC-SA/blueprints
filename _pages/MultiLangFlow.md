@@ -30,7 +30,7 @@ You will need to use a naming convention for your message files like chooseDept_
 ### Create a Flow Variable for language  
 {% include_relative _parts/flowVariable.md 
     name="lang" 
-    dValue="EN"
+    defaultValue="EN"
     type="String"  
     %}
 
@@ -55,37 +55,15 @@ value="FR"
 
 
 ### Create a Menu to select preferred language
-{% include_relative _parts/menu.md 
-prompt="LanguageMenuPrompt"
-link2="link to set lang variable to SP"
-link3="link to set lang variable to FR"
-noInputLink="loop to node input"
-unmatchedLink="link to first prompt or menu node of the rest of the flow"
-%}
-
----
-
-### Add a Play Message node 
-<!-- this is just a note!! -->
-{% include_relative _parts/playMessage.md
-a1="welcome_\{\{lang\}\}.wav"
-type1="Audio Variable" 
-
-%}
-
----
-
-
-
-<!-- Delete any unneeded lines Tab through values Escape brackets \{\{ variable \}\} -->
-{% include_relative _parts/playMessage.md
-
+<!-- Escape brackets \{\{ variable \}\} -->
+{% include_relative _parts/menu.md
 TTSBool="false"
 connector="name"
 voice="name"
+promptCount=1
 
 type1="File"
-a1="name of file, variable expression, or TTS"
+a1="LanguageMenuPrompt.wav"
 
 type2="File"
 a2="name of file, variable expression, or TTS"
@@ -99,7 +77,53 @@ a4="name of file, variable expression, or TTS"
 type5="File"
 a5="name of file, variable expression, or TTS"
 
+interruptible="true"
+link0="Enter Link Info"
+link1="Enter Link Info"
+link2="link to set lang variable to SP"
+link3="link to set lang variable to FR"
+link4="Enter Link Info"
+link5="Enter Link Info"
+link6="Enter Link Info"
+link7="Enter Link Info"
+link8="Enter Link Info"
+link9="Enter Link Info"
+noInputTimeout="3"
+noInputLink="link to next message node"
+unmatchedLink="link to next message node"
 %}
+---
+
+### Add a Play Message node 
+<!-- Tab through values Escape brackets \{\{ variable \}\} -->
+{% include_relative _parts/playMessage.md
+
+TTSBool="false"
+connector="name"
+voice="name"
+promptCount=1
+
+type1="Audio Variable"
+a1="welcome_\{\{lang\}\}.wav"
+
+type2="File"
+a2="name of file, variable expression, or TTS"
+
+type3="File"
+a3="name of file, variable expression, or TTS"
+
+type4="File"
+a4="name of file, variable expression, or TTS"
+
+type5="name of file, variable expression, or TTS"
+a5="name of file, variable expression, or TTS"
+
+%}
+---
+
+
+
+
 
 ## Testing
 
