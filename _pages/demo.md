@@ -57,6 +57,36 @@ _done!_'
 
 ---
 
+{% include_relative _parts/queueContactVoice.md
+queueMethod="Static"
+nameOrVar=""
+fallback=""
+setPriority="false"
+setPMethod="Static"
+priorityValue="10"
+agentAvail="false"
+agentAvailMethod="Static"
+agentAvailVariable=""
+skillRelax="true"
+
+%}
+
+
+### queue test
+{% include_relative _parts/queueContactVoice.md
+queueMethod="Static"
+nameOrVar=""
+fallback="FallbackQueueName"
+setPriority="false"
+setPMethod="Static"
+priorityValue="10"
+agentAvail="false"
+agentAvailMethod="Static"
+agentAvailVariable=""
+skill='Skill:this,Operator:is,Value Type:Static, Value:real  ^ Skill:still another,Operator:<=,Value Type:Static, Value:9  _done!_'
+skillRelax="true"
+skillRelaxSteps='Relax After: 60, Skill:this, Operator:isnot, Value Type:Static, Value:real  ^ Relax After: 60, Skill:still another, Operator:<=, Value Type:Static, Value:2  _done!_'
+%}
 
 ## Testing
 

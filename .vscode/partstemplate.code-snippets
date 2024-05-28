@@ -380,5 +380,40 @@
 		  "%}"
 		],
 		"description": "queueToAgent"
+	  },
+	  "queueContactVoice": {
+		"prefix": "queueContactVoice",
+		"body": [
+		  "{% include_relative _parts/queueContactVoice.md",
+		  "queueMethod=\"${1|Static,Variable|}\"",
+		  "nameOrVar=\"${2:}\"",
+		  "fallback=\"${3:FallbackQueueName}\"",
+		  "setPriority=\"${4|false,true|}\"",
+		  "setPMethod=\"${5|Static,Variable|}\"",
+		  "priorityValue=\"${6:10}\"",
+		  "agentAvail=\"${7|false,true|}\"",
+		  "agentAvailMethod=\"${8|Static,Variable|}\"",
+		  "agentAvailVariable=\"${9:}\"",
+		  "skill='${10|none',_addSkill|}${11:}",
+		  "skillRelax=\"${12|true,false|}${13:}\"",
+		  "skillRelaxSteps='${14|none',_relaxSkill|}${15:}",
+		  "nodeExit\"=${16:}\"",
+		  "%}"
+		],
+		"description": "queueContactVoice"
+	  },
+	  "_addSkill": {
+		"prefix": "_addSkill",
+		"body": [
+		  "Skill:${1:name},Operator:${2:operator},Value Type:${3|Static,Variable|}, Value:${4:value}  ${5|^ _addSkill,_done!_'|}"
+		],
+		"description": "_addSkill"
+	  },
+	  "_relaxSkill": {
+		"prefix": "_relaxSkill",
+		"body": [
+		  "Relax After: ${1:60}, Skill:${2:name}, Operator:${3:operator}, Value Type:${4|Static,Variable|}, Value:${5:value}  ${6|^ _relaxSkill,_done!_'|}"
+		],
+		"description": "_relaxSkill"
 	  }
 }
