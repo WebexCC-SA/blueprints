@@ -67,6 +67,7 @@ priorityValue="10"
 agentAvail="false"
 agentAvailMethod="Static"
 agentAvailVariable=""
+skill='_done!_'
 skillRelax="true"
 
 %}
@@ -87,6 +88,59 @@ skill='Skill:this,Operator:is,Value Type:Static, Value:real  ^ Skill:still anoth
 skillRelax="true"
 skillRelaxSteps='Relax After: 60, Skill:this, Operator:isnot, Value Type:Static, Value:real  ^ Relax After: 60, Skill:still another, Operator:<=, Value Type:Static, Value:2  _done!_'
 %}
+
+
+### callback1 
+{% include_relative _parts/callback.md
+callbackDNVar="NewPhoneContact.ANI"
+differentQueue="false"
+diffQueueType="Static"
+queueVar="bill"
+cbAniType="Variable"
+CBAni="kyle"
+nodeExit=""
+%}
+
+### callback2
+{% include_relative _parts/callback.md
+callbackDNVar="NewPhoneContact.ANI"
+differentQueue="false"
+diffQueueType="Static"
+queueVar="NameorVar"
+cbAniType="Static"
+CBAni="bill"
+nodeExit="to disconnect call node"
+%}
+
+### Go To EP
+{% include_relative _parts/goto.md
+goToType="Entry Point"
+name="mike"
+versionLabe=""
+mappedVar=''
+%}
+
+
+### Go To Flow
+
+{% include_relative _parts/goto.md
+goToType="Flow"
+name="mike"
+versionLabe="Live"
+mappedVar='Current:mike,Destination:steve 
+^ Current:kyle,Destination:bill'
+%}
+
+### Go to test
+{% include_relative _parts/goto.md
+goToType="Flow"
+name="hnn"
+versionLabel="Live"
+mappedVar='_done!_'
+%}
+
+
+
 
 ## Testing
 

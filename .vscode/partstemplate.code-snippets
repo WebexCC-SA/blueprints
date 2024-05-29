@@ -354,9 +354,15 @@
 		  "$BLOCK_COMMENT_START Escape brackets \\\\{\\\\{ variable \\\\}\\\\} $BLOCK_COMMENT_END",
 		  "<ul>",
 		  "<li><a href=\"${1:https://help.webex.com/en-us/article/n5595zd/Webex-Contact-Center-Setup-and-Administration-Guide#Cisco_Generic_Topic.dita_5b84496c-fa1d-407e-bebd-fa25d2bc0f49}\" target=\"_blank\">(Link to documentation)</a></li>",
+		  "<li></li>",
+		  "<li></li>", 
+		  "<li></li>", 
+		  "<li></li>", 
+		  "<li></li>", 
+		  "<li></li>", 
 		  "",
 		  "",
-		  "<li>Node Exit: </li>",
+		  "<li>Node Exit: {{include.nodeExit}}</li>",
 		  "</ul>",
 		  "",
 		  "<script> (function() {Array.from(document.querySelectorAll(\"li\")).forEach((element) => {element.innerHTML = element.innerHTML.replaceAll(\"\\\\\",\"\")})})()</script>"
@@ -397,7 +403,7 @@
 		  "skill='${10|none',_addSkill|}${11:}",
 		  "skillRelax=\"${12|true,false|}${13:}\"",
 		  "skillRelaxSteps='${14|none',_relaxSkill|}${15:}",
-		  "nodeExit\"=${16:}\"",
+		  "nodeExit=\"${16:}\"",
 		  "%}"
 		],
 		"description": "queueContactVoice"
@@ -405,15 +411,54 @@
 	  "_addSkill": {
 		"prefix": "_addSkill",
 		"body": [
-		  "Skill:${1:name},Operator:${2:operator},Value Type:${3|Static,Variable|}, Value:${4:value}  ${5|^ _addSkill,_done!_'|}"
+		  "Skill:${1:name},Operator:${2:operator},Value Type:${3|Static,Variable|}, Value:${4:value}",
+		  "${5|^ _addSkill,_done!_'|}"
 		],
 		"description": "_addSkill"
 	  },
 	  "_relaxSkill": {
 		"prefix": "_relaxSkill",
 		"body": [
-		  "Relax After: ${1:60}, Skill:${2:name}, Operator:${3:operator}, Value Type:${4|Static,Variable|}, Value:${5:value}  ${6|^ _relaxSkill,_done!_'|}"
+		  "Relax After: ${1:60}, Skill:${2:name}, Operator:${3:operator}, Value Type:${4|Static,Variable|}, Value:${5:value}",
+		  "${6|^ _relaxSkill,_done!_'|}"
 		],
 		"description": "_relaxSkill"
+	  },
+	  "callback": {
+		"prefix": "callback",
+		"body": [
+		  "{% include_relative _parts/callback.md",
+		  "callbackDNVar=\"${1:NewPhoneContact.ANI}\"",
+		  "differentQueue=\"${2|false,true|}\"",
+		  "diffQueueType=\"${3|Static,Variable|}\"",
+		  "queueVar=\"${4:NameorVar}\"",
+		  "cbAniType=\"${5|Static,Variable|}\"",
+		  "CBAni=\"${6:NameorVar}\"",
+		  "nodeExit=\"${7:}\"",
+		  "%}",
+		  "${8:}"
+		],
+		"description": "callback"
+	  },
+	  "goto": {
+		"prefix": "goto",
+		"body": [
+		  "{% include_relative _parts/goto.md",
+		  "goToType=\"${1|Entry Point,Flow|}\"",
+		  "name=\"${2:Name}\"",
+		  "versionLabel=\"${3|Live,Latest,Dev,Test|}\"",
+		  "mappedVar='${4|_done!_',_addmappedvar|}${5:}",
+		  "%}",
+		  "${6:}"
+		],
+		"description": "goto"
+	  },
+	  "_addmappedvar": {
+		"prefix": "_addmappedvar",
+		"body": [
+		  "Current:${1:VarName},Destination:${2:VarName}",
+		  "${3|^ _addmappedvar,_done!_'|}"
+		],
+		"description": "_addmappedvar"
 	  }
 }

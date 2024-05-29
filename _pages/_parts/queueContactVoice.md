@@ -11,7 +11,7 @@
 {% if include.agentAvail == "true" %}<li>{{include.agentAvailMethod}}</li>
 {% if include.agentAvailMethod == "Variable Agent Availability Check" %} <li>Check Agent Availability Variable: {{include.agentAvailVariable}}</li> {% endif %}{% endif %}
 {% assign skills = include.skill | remove:"_done!_" | split: "^" %}
-
+{% if skills.size >0 %}
 <li>Skill Requirements</li>
      <table>
           <thead>
@@ -65,7 +65,7 @@
 
             </table>
 {% endif %}
-
-<li>Node Exit: </li>
+{% endif %}
+<li>Node Exit: {{include.nodeExit}}</li>
 </ul>
 
