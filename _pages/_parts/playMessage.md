@@ -8,6 +8,7 @@
 {% if include.promptCount >= 3 %}<li> {{include.type3 | default:"Audio File"}}: {{include.a3}}</li> {% endif %}
 {% if include.promptCount >= 4 %}<li> {{include.type4 | default:"Audio File"}}: {{include.a4}}</li> {% endif %}
 {% if include.promptCount >= 5 %}<li> {{include.type5 | default:"Audio File"}}: {{include.a5}}</li> {% endif %}
+<li>Node Exit: {{include.nodeExit}}</li>
 </ul>
 
 <script> (function() {Array.from(document.querySelectorAll("li")).forEach((element) => {element.innerHTML = element.innerHTML.replaceAll("\\","")})})()</script>

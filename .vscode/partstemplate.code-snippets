@@ -15,8 +15,8 @@
 	// 	],
 	// 	"description": "Log output to console"
 	// }
-	"Play message": {
-		"prefix": "message",
+	"Playmessage": {
+		"prefix": "playmessage",
 		"body": [
 			"$BLOCK_COMMENT_START Tab through values Escape brackets \\{\\{ variable \\\\}\\\\} $BLOCK_COMMENT_END",
 			"{% include_relative _parts/playMessage.md",
@@ -43,7 +43,7 @@
 			"",
 			"%}"
 		],
-		"description": "Play message"
+		"description": "Playmessage"
 	},
 	"Case Statement": {
 		"prefix": "case",
@@ -117,7 +117,9 @@
 			"noInputTimeout=\"${26:3}\"",
 			"noInputLink=\"${27:}\"",
 			"unmatchedLink=\"${28:}\"",
-			"%}"
+			"nodeExit=\"${29:}\"",
+			"%}",
+			"${30:}"
 		],
 		"description": "Menu"
 	},
@@ -128,6 +130,7 @@
 			"{% include_relative _parts/setVariable.md",
 			"name=\"${1:name}\"",
 			"value=\"${2:\\{\\{ variable \\\\\\}\\\\\\}}\"",
+			"nodeExit=\"${3:}\"",
 			"%}",
 			""
 		],
@@ -282,8 +285,9 @@
 			"parse='",
 			"OutputVar:${19:willy},Path:${20:$.wonka}",
 			"${21|_addParseVariable,_done!_'|}${22:}",
+			"",
 			"%}",
-			""
+			"nodeExit=${23:}"
 		],
 		"description": "httpRequest"
 	},
@@ -304,6 +308,7 @@
 		  "musicFileOrExpression=\"${2:}\"",
 		  "offset=\"${3:}\"",
 		  "duration=\"${4:}\"",
+		  "nodeExit=${5:}",
 		  "%}",
 		  ""
 		],
@@ -460,5 +465,65 @@
 		  "${3|^ _addmappedvar,_done!_'|}"
 		],
 		"description": "_addmappedvar"
+	  },
+	  "subFlowVariable": {
+		"prefix": "subFlowVariable",
+		"body": [
+		  "{% include_relative _parts/subFlowVariable.md",
+		  "name=\"${1:}\"",
+		  "type=\"${2|String,Integer,Date and Time,Boolean,Decimal,JSON|}\"",
+		  "defaultValue=\"${3:}\"",
+		  "input=\"${4|false,true|}\"",
+		  "output=\"${5|false,true|}\"",
+		  "sensitive=\"${6|false,true|}\"",
+		  "%}",
+		  ""
+		],
+		"description": "subFlowVariable"
+	  },
+	  "_subInputVar": {
+		"prefix": "_subInputVar",
+		"body": [
+		  "Current Flow Variable:${1:name},Subflow Input Variable:${2:name},",
+		  "${3|^ _subInputVar,_done!_'|}${4:}"
+		],
+		"description": "_subInputVar"
+	  },
+	  "_subOutputVar": {
+		"prefix": "_subOutputVar",
+		"body": [
+		  "Current Flow Variable:${1:name},Subflow Output Variable:${2:name},",
+		  "${3|^ _subOutputVar,_done!_'|}${4:}"
+		],
+		"description": "_subOutputVar"
+	  },
+	  "subflowNode": {
+		"prefix": "subflowNode",
+		"body": [
+		  "{% include_relative _parts/subflowNode.md",
+		  "name=\"${1:Name or note}\"",
+		  "label=\"${2|Latest,Dev,Live,Test|}\"",
+		  "autoUpdates=\"${3|true,false|}\"",
+		  "inputVar='${4|_subOutputVar,_done!_'|}",
+		  "outputVar='${5|_subOutputVar,_done!_'|}",
+		  "nodeExit=\"${6:}\"",
+		  "%}"
+		],
+		"description": "subflowNode"
+	  },
+	  "entryPointVoice": {
+		"prefix": "entryPointVoice",
+		"body": [
+		  "{% include_relative _parts/entryPointVoice.md",
+		  "name=\"${1:Name of EP}\"",
+		  "description=\"${2:optional}\"",
+		  "type=\"Inbound Telephony\"",
+		  "flowName=\"${3:}\"",
+		  "version=\"${4|Latest,Dev,Live,Test|}\"",
+		  "music=\"${5:defaultmusic_on_hold.wav}\"",
+		  "numberMapping=\"${6:}\"",
+		  "%}"
+		],
+		"description": "entryPointVoice"
 	  }
-}
+	}

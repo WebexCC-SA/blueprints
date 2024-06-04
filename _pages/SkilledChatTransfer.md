@@ -2,6 +2,8 @@
 title: Transfer Skilled Chat to Another Queue
 category: Digital
 layout: post
+created: 05/06/2024
+updated: 05/06/2024
 mermaid: true
 status: live
 ---

@@ -30,6 +30,7 @@ editable="false"
 
 ---
 
+
 ### http request
 {% include_relative _parts/httpRequest.md
 authEndpoint="false"
@@ -72,6 +73,15 @@ skillRelax="true"
 
 %}
 
+
+{% include_relative _parts/subFlowVariable.md
+name=""
+type=""
+defaultValue=""
+input=""
+output=""
+sensitive=""
+%}
 
 ### queue test
 {% include_relative _parts/queueContactVoice.md
@@ -139,8 +149,30 @@ versionLabel="Live"
 mappedVar='_done!_'
 %}
 
+### Subflow
+{% include_relative _parts/subflowNode.md
+name="steve"
+label="latest"
+autoUpdates="true"
+inputVar='Current Flow Variable:NewPhoneContact.ANI,Subflow Input Variable:ANI,
+^ Current Flow Variable:AT,Subflow Input Variable:AT,
+_done!_'
+outputVar='Current Flow Variable:existingCallback,Subflow Output Variable:existingCallback,
+_done!_'
+nodeExit=""
+%}
 
 
+### EntryPoint
+{% include_relative _parts/entryPointVoice.md
+name=""
+description=""
+type=""
+flowName=""
+version=""
+music=""
+numberMapping=""
+%}
 
 ## Testing
 

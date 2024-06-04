@@ -5,6 +5,7 @@
 <li>{% if include.type == "static" %}Music File: {% else %} Dynamic Audio File: {% endif %}{{include.musicFileOrExpression}}</li>
 <li>Start Offset (seconds): {{include.offset | default: "0"}}</li>
 <li>Music Duration: {{include.duration}} </li>
+<li>Node Exit: {{include.nodeExit}}</li>
 </ul>
 
 <script> (function() {Array.from(document.querySelectorAll("li")).forEach((element) => {element.innerHTML = element.innerHTML.replaceAll("\\","")})})()</script>
