@@ -2,8 +2,8 @@
 title: Multiple domains using the same Connect flow for chat
 category: Digital
 layout: post
-created: 05/06/2023
-updated: 05/07/2023
+created: 05/06/2024
+updated: 05/06/2024
 mermaid: true
 status: live
 ---

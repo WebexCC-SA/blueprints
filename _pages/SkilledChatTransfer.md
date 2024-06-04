@@ -2,6 +2,8 @@
 title: Transfer Skilled Chat to Another Queue
 category: Digital
 layout: post
+created: 05/06/2024
+updated: 05/06/2024
 mermaid: true
 status: live
 ---
@@ -56,7 +58,7 @@ This example will be using a single text skill, single global variable, and a si
 ---
 
 ### Create/use 2 chat queues
-{% include_relative _parts/queue.md
+{% include_relative _parts/createQueue.md
   name="existing queue"
   ChType="Chat"
   routeType="Skills Based"
@@ -65,7 +67,7 @@ This example will be using a single text skill, single global variable, and a si
 
 ---
 
-{% include_relative _parts/queue.md
+{% include_relative _parts/createQueue.md
   name="transfer queue"
   ChType="Chat"
   routeType="Skills Based"

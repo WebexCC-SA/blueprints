@@ -15,36 +15,515 @@
 	// 	],
 	// 	"description": "Log output to console"
 	// }
-	"Play message": {
-		"prefix": "message",
+	"Playmessage": {
+		"prefix": "playmessage",
 		"body": [
-		  "$BLOCK_COMMENT_START Delete any unneeded lines Tab through values Escape brackets \\{\\{ variable \\\\}\\\\} $BLOCK_COMMENT_END",
-		  "{% include_relative _parts/playMessage.md",
+			"$BLOCK_COMMENT_START Tab through values Escape brackets \\{\\{ variable \\\\}\\\\} $BLOCK_COMMENT_END",
+			"{% include_relative _parts/playMessage.md",
+			"",
+			"TTSBool=\"${1|false,true|}\"",
+			"connector=\"${2:name}\"",
+			"voice=\"${3:name}\"",
+			"promptCount=${4|1,2,3,4,5|}",
+			"",
+			"type1=\"${5|File,Variable,TTS|}\"",
+			"a1=\"${6:name of file, variable expression, or TTS}\"",
+			"",
+			"type2=\"${7|File,Variable,TTS|}\"",
+			"a2=\"${8:name of file, variable expression, or TTS}\"",
+			"",
+			"type3=\"${9|File,Variable,TTS|}\"",
+			"a3=\"${10:name of file, variable expression, or TTS}\"",
+			"",
+			"type4=\"${11|File,Variable,TTS|}\"",
+			"a4=\"${12:name of file, variable expression, or TTS}\"",
+			"",
+			"type5=\"${12|File,Variable,TTS|}\"",
+			"a5=\"${13:name of file, variable expression, or TTS}\"",
+			"",
+			"%}"
+		],
+		"description": "Playmessage"
+	},
+	"Case Statement": {
+		"prefix": "case",
+		"body": [
+			"$BLOCK_COMMENT_START  c# = the case expression. Tab through values. Escape brackets \\{\\{ variable \\\\}\\\\} \" $BLOCK_COMMENT_END",
+			"{% include_relative _parts/case.md",
+			"variableorExpression=\"${1|variable,expression|}\"",
+			"variableorExpressionValue=\"${2:variable name or expression}\"",
+			"defaultlink=\"${3:defaultlink}\"",
+			"caseCount=${4|1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20|} ",
+			"c1=\"${5:value}\"",
+			"c2=\"${6:value}\"",
+			"c3=\"${7:value}\"",
+			"c4=\"${8:value}\"",
+			"c5=\"${9:value}\"",
+			"c6=\"${10:value}\"",
+			"c7=\"${11:value}\"",
+			"c8=\"${12:value}\"",
+			"c9=\"${13:value}\"",
+			"c10=\"${14:value}\"",
+			"c11=\"${15:value}\"",
+			"c12=\"${16:value}\"",
+			"c13=\"${17:value}\"",
+			"c14=\"${18:value}\"",
+			"c15=\"${19:value}\"",
+			"c16=\"${20:value}\"",
+			"c17=\"${21:value}\"",
+			"c18=\"${22:value}\"",
+			"c19=\"${23:value}\"",
+			"c20=\"${24:value}\"",
+			"%}"
+		],
+		"description": "Case Statement"
+	},
+	"Menu": {
+		"prefix": "menu",
+		"body": [
+			"$BLOCK_COMMENT_START Escape brackets \\\\{\\\\{ variable \\\\}\\\\} $BLOCK_COMMENT_END",
+			"{% include_relative _parts/menu.md",
+			"TTSBool=\"${1|false,true|}\"",
+			"connector=\"${2:name}\"",
+			"voice=\"${3:name}\"",
+			"promptCount=${4|1,2,3,4,5|}",
+			"",
+			"type1=\"${5|File,Audio Variable,TTS|}\"",
+			"a1=\"${6:name of file, variable expression, or TTS}\"",
+			"",
+			"type2=\"${7|File,Audio Variable,TTS|}\"",
+			"a2=\"${8:name of file, variable expression, or TTS}\"",
+			"",
+			"type3=\"${9|File,Audio Variable,TTS|}\"",
+			"a3=\"${10:name of file, variable expression, or TTS}\"",
+			"",
+			"type4=\"${11|File,Audio Variable,TTS|}\"",
+			"a4=\"${12:name of file, variable expression, or TTS}\"",
+			"",
+			"type5=\"${13|File,Audio Variable,TTS|}\"",
+			"a5=\"${14:name of file, variable expression, or TTS}\"",
+			"",
+			"interruptible=\"${15|true,false|}\"",
+			"link0=\"${16:Enter Link Info}\"",
+			"link1=\"${17:Enter Link Info}\"",
+			"link2=\"${18:Enter Link Info}\"",
+			"link3=\"${19:Enter Link Info}\"",
+			"link4=\"${20:Enter Link Info}\"",
+			"link5=\"${21:Enter Link Info}\"",
+			"link6=\"${22:Enter Link Info}\"",
+			"link7=\"${23:Enter Link Info}\"",
+			"link8=\"${24:Enter Link Info}\"",
+			"link9=\"${25:Enter Link Info}\"",
+			"noInputTimeout=\"${26:3}\"",
+			"noInputLink=\"${27:}\"",
+			"unmatchedLink=\"${28:}\"",
+			"nodeExit=\"${29:}\"",
+			"%}",
+			"${30:}"
+		],
+		"description": "Menu"
+	},
+	"setVariable": {
+		"prefix": "setVariable",
+		"body": [
+			"$BLOCK_COMMENT_START Escape brackets \\\\{\\\\{ variable \\\\}\\\\} $BLOCK_COMMENT_END",
+			"{% include_relative _parts/setVariable.md",
+			"name=\"${1:name}\"",
+			"value=\"${2:\\{\\{ variable \\\\\\}\\\\\\}}\"",
+			"nodeExit=\"${3:}\"",
+			"%}",
+			""
+		],
+		"description": "setVariable"
+	},
+	"flowVariable": {
+		"prefix": "flowVariable",
+		"body": [
+			"{% include_relative _parts/flowVariable.md",
+			"name=\"${1:name}\"",
+			"type=\"${2|String,Integer,Date and Time,Boolean,Decimal,JSON|}\"",
+			"defaultValue=\"${3:}\"",
+			"viewable=\"${4|false,true|}\"",
+			"editable=\"${5|false,true|}\"",
+			"%}",
+			""
+		],
+		"description": "flowVariable"
+	},
+	"globalVariable": {
+		"prefix": "globalVariable",
+		"body": [
+			"{% include_relative _parts/globalVariable.md",
+			"name=\"${1:name}\"",
+			"type=\"${2|String,Integer,Date Time,Boolean,Decimal|}\"",
+			"defaultValue=\"${3:}\"",
+			"reportable=\"${4|false,true|}\"",
+			"sensitive=\"${5|false,true|}\"",
+			"viewable=\"${6|false,true|}\"",
+			"desktopLabel=\"${7:}\"",
+			"editable=\"${8|false,true|}\"",
+			"%}",
+			""
+		],
+		"description": "globalVariable"
+	},
+	"createQueue": {
+		"prefix": "createQueue",
+		"body": [
+			"{% include_relative _parts/createQueue.md",
+			"name=\"${1:name}\"",
+			"queueType=\"${2|Inbound Queue,Outbound Queue|}\"",
+			"ChType=\"${3|Telephony,Chat,Email,Socila Channel|}\"",
+			"routeType=\"${4|Longest Available Agent,Skill Based|}\"",
+			"skillStyle=\"${5|Agent available longest,Best available agent|}\"",
+			"teams=\"${6:}\"",
+			"%}"
+		],
+		"description": "createQueue"
+	},
+	"skill": {
+		"prefix": "skill",
+		"body": [
+			"{% include_relative _parts/skill.md",
+			"name=\"${1:skillname}\"",
+			"type=\"${2|Boolean,Enum,Proficiency,Text|}\"",
+			"enumVals=\"${3:}\"",
+			"%}"
+		],
+		"description": "skill"
+	},
+	"collectDigits": {
+		"prefix": "collectDigits",
+		"body": [
+			"$BLOCK_COMMENT_START Escape brackets \\\\\\\\{\\\\\\\\{ variable \\\\\\\\}\\\\\\\\} $BLOCK_COMMENT_END",
+			"{% include_relative _parts/collectDigits.md",
+			"TTSBool=\"${1|false,true|}\"",
+			"connector=\"${2:name}\"",
+			"voice=\"${3:name}\"",
+			"promptCount=${4|1,2,3,4,5|}",
+			"",
+			"type1=\"${5|File,Audio Variable,TTS|}\"",
+			"a1=\"${6:name of file, variable expression, or TTS}\"",
+			"",
+			"type2=\"${7|File,Audio Variable,TTS|}\"",
+			"a2=\"${8:name of file, variable expression, or TTS}\"",
+			"",
+			"type3=\"${9|File,Audio Variable,TTS|}\"",
+			"a3=\"${10:name of file, variable expression, or TTS}\"",
+			"",
+			"type4=\"${11|File,Audio Variable,TTS|}\"",
+			"a4=\"${12:name of file, variable expression, or TTS}\"",
+			"",
+			"type5=\"${13|File,Audio Variable,TTS|}\"",
+			"a5=\"${14:name of file, variable expression, or TTS}\"",
+			"",
+			"interruptible=\"${15|true,false|}\"",
+			"noInputTimeout=\"${16:3}\"",
+			"interDigitTimeout=\"${17:3}\"",
+			"minDigits=\"${18:1}\"",
+			"maxDigits=\"${19:10}\"",
+			"termSymbol=\"${20|#,*|}\"",
+			"noInputLink=\"${21:}\"",
+			"unmatchedLink=\"${22:}\"",
+			"%}"
+		],
+		"description": "collectDigits"
+	},
+	"condition": {
+		"prefix": "condition",
+		"body": [
+			"$BLOCK_COMMENT_START Escape brackets \\\\{\\\\{ variable \\\\}\\\\} $BLOCK_COMMENT_END",
+			"{% include_relative _parts/condition.md",
+			"expression=\"${1:}\"",
+			"trueLink=\"${2:}\"",
+			"falseLink=\"${3:}\"",
+			"%}"
+		],
+		"description": "condition"
+	},
+	"_addParseVariable": {
+		"prefix": "_addParseVariable",
+		"body": [
+			"||Output Variable:${1:name},Path Expression:${2:expression}",
+			"${3|_addParseVariable,_done!_'|}"
+		],
+		"description": "_addParseVariable"
+	},
+	"Parse": {
+		"prefix": "Parse",
+		"body": [
+			"{% include_relative _parts/parse.md",
+			"inputVar=\"${1:varName}\"",
+			"contentType=\"${2|JSON,TOML,XML,YAML|}\"",
+			"OutputVar='Output Variable:${3:name},Path Expression:${4:expression}",
+			"${5|_addParseVariable,_done!_'|}${6:}",
+			"",
+			"%}",
+		],
+		"description": "Parse"
+	},
+	"httpRequest": {
+		"prefix": "httpRequest",
+		"body": [
+			"{% include_relative _parts/httpRequest.md",
+			"authEndpoint=\"${1|false,true|}\"",
+			"connector=\"${2:na}\"",
+			"requestPath=\"${3:URL or Path}\"",
+			"method=\"${4|GET,DELETE,HEAD,OPTIONS,PATCH,POST,PUT|}\"",
+			"params='",
+			"Key:${5:thisKey},Value:${6:$.money}",
+			"${7|_addKeyPair,_done!_'|}${8:}",
+			"headers='",
+			"Key:${9:headKey},Value:${10:funk}",
+			"${11|_addKeyPair,_done!_'|}${12:}",
+			"requestContentType=\"${13|Application/JSON,File,Form URL Encoded,Other,TOML,XML,YAML|}\"",
+			"fileContent=\"${14:variable name}\"",
+			"body='${15:}'",
+			"timeout=\"${16:2000}\"",
+			"retries=\"${17:1}\"",
+			"responseContentType=\"${18|JSON,TOML,XML,YAML|}\"",
+			"parse='",
+			"OutputVar:${19:willy},Path:${20:$.wonka}",
+			"${21|_addParseVariable,_done!_'|}${22:}",
+			"",
+			"%}",
+			"nodeExit=${23:}"
+		],
+		"description": "httpRequest"
+	},
+	"_addKeyPair": {
+		"prefix": "_addKeyPair",
+		"body": [
+			"||Key:${1:name},Value:${2:expression}",
+			"${3|_addKeyPair,_done!_'|}"
+		],
+		"description": "_addKeyPair"
+	},
+	"playMusic": {
+		"prefix": "playMusic",
+		"body": [
+		  "$BLOCK_COMMENT_START Escape brackets \\\\{\\\\{ variable \\\\}\\\\} $BLOCK_COMMENT_END",
+		  "{% include_relative _parts/playMusic.md",
+		  "type=\"${1|static,dynamic|}\"",
+		  "musicFileOrExpression=\"${2:}\"",
+		  "offset=\"${3:}\"",
+		  "duration=\"${4:}\"",
+		  "nodeExit=${5:}",
+		  "%}",
+		  ""
+		],
+		"description": "playMusic"
+	  },
+	  "!BP": {
+		"prefix": "!BP",
+		"body": [
+		  "---",
+		  "title: ${1:Title of blueprint}",
+		  "category: Digital",
+		  "layout: post",
+		  "created: ${2:05/06/2023}",
+		  "updated: 05/07/2023",
+		  "mermaid: true",
+		  "status: draft",
+		  "---",
 		  "",
-		  "TTSBool=\"${1|false,true|}\"",
-		  "connector=\"${2:name}\"",
-		  "voice=\"${3:name}\"",
+		  "## Problem",
+		  "${3:}",
+		  "## Solution",
+		  "${4:}",
+		  "### Constraints",
+		  "${5:}",
+		  "## Required Components",
+		  "${6:}",
 		  "",
-		  "type1=\"${4|File,Variable,TTS|}\"",
-		  "a1=\"${5:name of file, variable expression, or TTS}\"",
+		  "---",
 		  "",
-		  "type2=\"${6|File,Variable,TTS|}\"",
-		  "a2=\"${7:name of file, variable expression, or TTS}\"",
+		  "## Method",
+		  "${7:}",
 		  "",
-		  "type3=\"${8|File,Variable,TTS|}\"",
-		  "a3=\"${9:name of file, variable expression, or TTS}\"",
+		  "---",
 		  "",
-		  "type4=\"${10|File,Variable,TTS|}\"",
-		  "a4=\"${11:name of file, variable expression, or TTS}\"",
 		  "",
-		  "type5=\"${12|File,Variable,TTS|}\"",
-		  "a5=\"${13:name of file, variable expression, or TTS}\"",
+		  "## Testing",
 		  "",
+		  "### Setup",
+		  "${8:}",
+		  "### MoP",
+		  "${9:}"
+		],
+		"description": "!BP"
+	  },
+	  "!part": {
+		"prefix": "!part",
+		"body": [
+		  "$BLOCK_COMMENT_START Escape brackets \\\\{\\\\{ variable \\\\}\\\\} $BLOCK_COMMENT_END",
+		  "<ul>",
+		  "<li><a href=\"${1:https://help.webex.com/en-us/article/n5595zd/Webex-Contact-Center-Setup-and-Administration-Guide#Cisco_Generic_Topic.dita_5b84496c-fa1d-407e-bebd-fa25d2bc0f49}\" target=\"_blank\">(Link to documentation)</a></li>",
+		  "<li></li>",
+		  "<li></li>", 
+		  "<li></li>", 
+		  "<li></li>", 
+		  "<li></li>", 
+		  "<li></li>", 
+		  "",
+		  "",
+		  "<li>Node Exit: {{include.nodeExit}}</li>",
+		  "</ul>",
+		  "",
+		  "<script> (function() {Array.from(document.querySelectorAll(\"li\")).forEach((element) => {element.innerHTML = element.innerHTML.replaceAll(\"\\\\\",\"\")})})()</script>"
+		],
+		"description": "!part"
+	  },
+	  "queueToAgent": {
+		"prefix": "queueToAgent",
+		"body": [
+		  "{% include_relative _parts/queueToAgent.md",
+		  "agentVar=\"${1:var}\"",
+		  "lookupType=\"${2|Email,ID|}\"",
+		  "setP=\"${3|false,true|}\"",
+		  "setPMethod=\"${4|Static,Variable|}\"",
+		  "priorityValue=\"${5:P10}\"",
+		  "reportingQueue=\"${6:name}\"",
+		  "park=\"${7|false,true|}\"",
+		  "recoveryQueue=\"${8:name}\"",
+		  "nodeExit=\"${9:}\"",
+		  "nodeError=\"${10:}\"",
 		  "%}"
 		],
-		"description": "Play message"
+		"description": "queueToAgent"
+	  },
+	  "queueContactVoice": {
+		"prefix": "queueContactVoice",
+		"body": [
+		  "{% include_relative _parts/queueContactVoice.md",
+		  "queueMethod=\"${1|Static,Variable|}\"",
+		  "nameOrVar=\"${2:}\"",
+		  "fallback=\"${3:FallbackQueueName}\"",
+		  "setPriority=\"${4|false,true|}\"",
+		  "setPMethod=\"${5|Static,Variable|}\"",
+		  "priorityValue=\"${6:10}\"",
+		  "agentAvail=\"${7|false,true|}\"",
+		  "agentAvailMethod=\"${8|Static,Variable|}\"",
+		  "agentAvailVariable=\"${9:}\"",
+		  "skill='${10|none',_addSkill|}${11:}",
+		  "skillRelax=\"${12|true,false|}${13:}\"",
+		  "skillRelaxSteps='${14|none',_relaxSkill|}${15:}",
+		  "nodeExit=\"${16:}\"",
+		  "%}"
+		],
+		"description": "queueContactVoice"
+	  },
+	  "_addSkill": {
+		"prefix": "_addSkill",
+		"body": [
+		  "Skill:${1:name},Operator:${2:operator},Value Type:${3|Static,Variable|}, Value:${4:value}",
+		  "${5|^ _addSkill,_done!_'|}"
+		],
+		"description": "_addSkill"
+	  },
+	  "_relaxSkill": {
+		"prefix": "_relaxSkill",
+		"body": [
+		  "Relax After: ${1:60}, Skill:${2:name}, Operator:${3:operator}, Value Type:${4|Static,Variable|}, Value:${5:value}",
+		  "${6|^ _relaxSkill,_done!_'|}"
+		],
+		"description": "_relaxSkill"
+	  },
+	  "callback": {
+		"prefix": "callback",
+		"body": [
+		  "{% include_relative _parts/callback.md",
+		  "callbackDNVar=\"${1:NewPhoneContact.ANI}\"",
+		  "differentQueue=\"${2|false,true|}\"",
+		  "diffQueueType=\"${3|Static,Variable|}\"",
+		  "queueVar=\"${4:NameorVar}\"",
+		  "cbAniType=\"${5|Static,Variable|}\"",
+		  "CBAni=\"${6:NameorVar}\"",
+		  "nodeExit=\"${7:}\"",
+		  "%}",
+		  "${8:}"
+		],
+		"description": "callback"
+	  },
+	  "goto": {
+		"prefix": "goto",
+		"body": [
+		  "{% include_relative _parts/goto.md",
+		  "goToType=\"${1|Entry Point,Flow|}\"",
+		  "name=\"${2:Name}\"",
+		  "versionLabel=\"${3|Live,Latest,Dev,Test|}\"",
+		  "mappedVar='${4|_done!_',_addmappedvar|}${5:}",
+		  "%}",
+		  "${6:}"
+		],
+		"description": "goto"
+	  },
+	  "_addmappedvar": {
+		"prefix": "_addmappedvar",
+		"body": [
+		  "Current:${1:VarName},Destination:${2:VarName}",
+		  "${3|^ _addmappedvar,_done!_'|}"
+		],
+		"description": "_addmappedvar"
+	  },
+	  "subFlowVariable": {
+		"prefix": "subFlowVariable",
+		"body": [
+		  "{% include_relative _parts/subFlowVariable.md",
+		  "name=\"${1:}\"",
+		  "type=\"${2|String,Integer,Date and Time,Boolean,Decimal,JSON|}\"",
+		  "defaultValue=\"${3:}\"",
+		  "input=\"${4|false,true|}\"",
+		  "output=\"${5|false,true|}\"",
+		  "sensitive=\"${6|false,true|}\"",
+		  "%}",
+		  ""
+		],
+		"description": "subFlowVariable"
+	  },
+	  "_subInputVar": {
+		"prefix": "_subInputVar",
+		"body": [
+		  "Current Flow Variable:${1:name},Subflow Input Variable:${2:name},",
+		  "${3|^ _subInputVar,_done!_'|}${4:}"
+		],
+		"description": "_subInputVar"
+	  },
+	  "_subOutputVar": {
+		"prefix": "_subOutputVar",
+		"body": [
+		  "Current Flow Variable:${1:name},Subflow Output Variable:${2:name},",
+		  "${3|^ _subOutputVar,_done!_'|}${4:}"
+		],
+		"description": "_subOutputVar"
+	  },
+	  "subflowNode": {
+		"prefix": "subflowNode",
+		"body": [
+		  "{% include_relative _parts/subflowNode.md",
+		  "name=\"${1:Name or note}\"",
+		  "label=\"${2|Latest,Dev,Live,Test|}\"",
+		  "autoUpdates=\"${3|true,false|}\"",
+		  "inputVar='${4|_subOutputVar,_done!_'|}",
+		  "outputVar='${5|_subOutputVar,_done!_'|}",
+		  "nodeExit=\"${6:}\"",
+		  "%}"
+		],
+		"description": "subflowNode"
+	  },
+	  "entryPointVoice": {
+		"prefix": "entryPointVoice",
+		"body": [
+		  "{% include_relative _parts/entryPointVoice.md",
+		  "name=\"${1:Name of EP}\"",
+		  "description=\"${2:optional}\"",
+		  "type=\"Inbound Telephony\"",
+		  "flowName=\"${3:}\"",
+		  "version=\"${4|Latest,Dev,Live,Test|}\"",
+		  "music=\"${5:defaultmusic_on_hold.wav}\"",
+		  "numberMapping=\"${6:}\"",
+		  "%}"
+		],
+		"description": "entryPointVoice"
 	  }
-
-
-
-}
+	}

@@ -3,6 +3,7 @@
 <li>Name: {{include.name}}</li>
 <li>Type: {{include.type |default: "String"}}</li>
 <li>Default Value: {{include.defaultValue }}</li>
-<li>Agent Viewable: {{include.viewable |default: false}}</li>
-<li>Agent Editable: {{include.editable | default: false}}</li>
+<li>Input: {{include.input |default: false}}</li>
+<li>Output: {{include.output | default: false}}</li>
+<li>Contains Sensitive Information: {{include.sensitive | default: false}}</li>
 </ul>
