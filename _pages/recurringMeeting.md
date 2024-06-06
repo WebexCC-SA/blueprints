@@ -33,7 +33,7 @@ While this method could be used for events which occur weekly or more frequently
 ## Method
 
 ### Create a new Business Hours Working Hours
-{% include_relative _parts/createBusinesshours.md
+{% include_relative _parts/createBusinessHours.md
 name="With Thursday Meeting"
 description=""
 timezone="Set to meet the needs of the business"

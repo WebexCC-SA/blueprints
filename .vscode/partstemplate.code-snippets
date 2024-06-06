@@ -525,8 +525,8 @@
 		],
 		"description": "entryPointVoice"
 	  },
-	  "createBusinesshours": {
-		"prefix": "createBusinesshours",
+	  "createBusinessHours": {
+		"prefix": "createBusinessHours",
 		"body": [
 		  "{% include_relative _parts/createBusinesshours.md",
 		  "name=\"${1:Shift Name}\"",
@@ -538,7 +538,7 @@
 		  "override=\"${11:}\"",
 		  "%}"
 		],
-		"description": "createBusinesshours"
+		"description": "createBusinessHours"
 	  },
 	  "_addShift": {
 		"prefix": "_addShift",
