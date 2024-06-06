@@ -31,7 +31,7 @@
           <thread>
             <tr>
               <th style="text-align: center">Current Flow Variable</th>
-              <th style="text-align: center">Subflow Input Variable</th>
+              <th style="text-align: center">Subflow Output Variable</th>
             </tr>
           </thread>
           <tbody>
