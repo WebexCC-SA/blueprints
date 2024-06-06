@@ -26,7 +26,7 @@
     {% endif %}
 {% assign outputs = include.outputVar | remove:"_done!_" | split: "^" %}
 {% if outputs.size >0 %}
-<li>Subflow Input Variables:</li>
+<li>Subflow Output Variables:</li>
      <table>
           <thread>
             <tr>
