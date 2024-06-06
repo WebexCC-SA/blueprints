@@ -231,6 +231,17 @@ editable="false"
 
 ---
 
+### Add a Set Variable node in Event Flows on the AgentAnswered Event
+<!-- Escape brackets \{\{ variable \}\} -->
+{% include_relative _parts/setVariable.md
+name="answeredQueueID"
+value="\{\{ AgentAnswered.QueueID \}\}"
+nodeExit="Connect to an end flow node"
+%}
+
+
+---
+
 ### Add a Condition node after your Queue Contact node(s)
 <!-- Escape brackets \{\{ variable \}\} -->
 {% include_relative _parts/condition.md
