@@ -285,9 +285,8 @@
 			"parse='",
 			"OutputVar:${19:willy},Path:${20:$.wonka}",
 			"${21|_addParseVariable,_done!_'|}${22:}",
-			"",
+			"nodeExit=\"${23:}\"",
 			"%}",
-			"nodeExit=${23:}"
 		],
 		"description": "httpRequest"
 	},
@@ -525,5 +524,41 @@
 		  "%}"
 		],
 		"description": "entryPointVoice"
+	  },
+	  "createBusinesshours": {
+		"prefix": "createBusinesshours",
+		"body": [
+		  "{% include_relative _parts/createBusinesshours.md",
+		  "name=\"${1:Shift Name}\"",
+		  "description=\"${2:}\"",
+		  "timezone=\"${3:Set to meet the needs of the business}\"",
+		  "shifts='Name=${4:Working};Days=${5:Sunday,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday};FromTime=${6:9:00 AM};ToTime=${7:6:00 PM}",
+		  "${8|^ _addShift,_done!_'|}${9:}",
+		  "holidayList=\"${10:}\"",
+		  "override=\"${11:}\"",
+		  "%}"
+		],
+		"description": "createBusinesshours"
+	  },
+	  "_addShift": {
+		"prefix": "_addShift",
+		"body": [
+		  "Name=${1:Working};Days=${2:Sunday,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday};FromTime=${3:9:00 AM};ToTime=${4:6:00 PM}",
+		  "${5|^ _addShift,_done!_'|}${6:}"
+		],
+		"description": "_addShift"
+	  },
+	  "businessHoursNode": {
+		"prefix": "businessHoursNode",
+		"body": [
+		  "{% include_relative _parts/businessHoursNode.md",
+		  "name=\"${1:name}\"",
+		  "workingHours=\"${2:}\"",
+		  "Holidays=\"${3:}\"",
+		  "Override=\"${4:}\"",
+		  "Default=\"${5:}\"",
+		  "%}"
+		],
+		"description": "businessHoursNode"
 	  }
 	}
