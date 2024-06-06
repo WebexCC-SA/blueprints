@@ -404,9 +404,9 @@
 		  "agentAvail=\"${7|false,true|}\"",
 		  "agentAvailMethod=\"${8|Static,Variable|}\"",
 		  "agentAvailVariable=\"${9:}\"",
-		  "skill='${10|none',_addSkill|}${11:}",
+		  "skill='${10|_done!_',_addSkill|}${11:}",
 		  "skillRelax=\"${12|true,false|}${13:}\"",
-		  "skillRelaxSteps='${14|none',_relaxSkill|}${15:}",
+		  "skillRelaxSteps='${14|_done!_',_relaxSkill|}${15:}",
 		  "nodeExit=\"${16:}\"",
 		  "%}"
 		],

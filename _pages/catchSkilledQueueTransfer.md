@@ -186,9 +186,9 @@ priorityValue="10"
 agentAvail="false"
 agentAvailMethod="Static"
 agentAvailVariable=""
-skill='none'
+skill='_done!_'
 skillRelax="false"
-skillRelaxSteps='none'
+skillRelaxSteps='_done!_'
 nodeExit="Connect to a Play Music node you will create in the next step"
 %}
 
