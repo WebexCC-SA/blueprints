@@ -298,7 +298,7 @@ voice="name"
 promptCount=1
 
 type1="File"
-a1="Create a recording to sat Press 1 for sales, press2 for service, press 3 for default"
+a1="Create a recording to say Press 1 for sales, Press 2 for service, Press 3 for default"
 
 type2="File"
 a2="name of file, variable expression, or TTS"
