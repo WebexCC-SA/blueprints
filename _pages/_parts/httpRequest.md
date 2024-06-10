@@ -27,7 +27,7 @@
 </ul>
 
 <li>Content Type: {{include.requestContentType}}</li>
-<li> Request Body:<br> <textarea cols="70" rows="7" spellcheck="false">{{include.body}}</textarea></li>
+<li>Request Body:<br> <textarea cols="70" rows="7" spellcheck="false">{{include.body}}</textarea></li>
 <li>Response Timeout (ms): {{include.timeout |default: "2000"}}</li>
 <li>Number of retries: {{include.retries | default:"1"}}</li>
 <h5>Parse Settings</h5>
