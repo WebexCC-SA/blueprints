@@ -501,7 +501,7 @@ nodeExit="Connect to a Disconnect Call node"
   - You will hear defaultmusic_on_hold.wav (different hold music than above) for 30 seconds
   - You will hear "Comfort message 1"
   - You will hear defaultmusic_on_hold.wav for 30 seconds
-  - You will hear "Comfort message 1"
+  - You will hear "Comfort message 2"
 - This pattern will repeat playing default (comfort) messages 3 and 4 with alternating music in queue before restarting with "Comfort message 1".
   - You will NOT receive the the option for a callback
 
