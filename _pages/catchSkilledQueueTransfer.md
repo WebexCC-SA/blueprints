@@ -33,7 +33,7 @@ This Solution will be using Variable Queueing and will not be skilling the trans
 ## Method
 
 ### Create a Subflow
-[(Link to Documentation)](https://help.webex.com/en-us/article/n5595zd/Webex-Contact-Center-Setup-and-Administration-Guide#concept-template_2812e465-bde2-4bf8-b133-b64bbddff95b)
+[(Link to Documentation)](https://help.webex.com/en-us/article/n5595zd/Webex-Contact-Center-Setup-and-Administration-Guide#concept-template_2812e465-bde2-4bf8-b133-b64bbddff95b){:target="\_blank"}
 
 
 ---
@@ -298,4 +298,7 @@ _done!_'
 
 ### Setup
 
+
 ### MoP
+
+

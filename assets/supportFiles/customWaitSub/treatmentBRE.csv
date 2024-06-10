@@ -1,0 +1,3 @@
+Key,Value,Action
+,"{""LOB"":""sales"",""MessageCount"":5,""MIQ"":""defaultmusic_on_hold_cisco_opus_no_1.wav"",""MessageInterval"":30,""callbackOfferEvery"":1}",ADD
+,"{""LOB"":""service"",""MessageCount"":4,""MIQ"":""defaultmusic_on_hold_cisco_opus_no_1.wav"",""MessageInterval"":30,""callbackOfferEvery"":4}",ADD

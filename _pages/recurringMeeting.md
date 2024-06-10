@@ -3,9 +3,9 @@ title: Schedule a Weekly Recurring Meeting with All or Part of the Contact Cente
 category: Voice
 layout: post
 created: 06/04/2024
-updated: 05/07/2023
+updated: 
 mermaid: true
-status: draft
+status: live
 ---
 
 ## Problem

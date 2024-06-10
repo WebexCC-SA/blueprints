@@ -9,4 +9,5 @@
 <li>{{these[0] | split:":" | first}}: {{these[0] | split:":" | last}} <br>
     {{these[1] | split:":" | first}}: {{these[1] | split:":" | last}} </li>
 {% endfor %}
+<li>Node Exit: {{include.nodeExit}}</li>
 </ul>

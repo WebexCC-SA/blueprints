@@ -5,7 +5,7 @@ layout: post
 created: 06/04/2024
 updated: 
 mermaid: true
-status: draft
+status: live
 ---
 
 ## Problem
@@ -33,7 +33,7 @@ Alternatively, you can use a token management service.
 ## Method
 
 ### Create a new subflow
-[(Link to Documentation)](https://help.webex.com/en-us/article/n5595zd/Webex-Contact-Center-Setup-and-Administration-Guide#concept-template_2812e465-bde2-4bf8-b133-b64bbddff95b)
+[(Link to Documentation)](https://help.webex.com/en-us/article/n5595zd/Webex-Contact-Center-Setup-and-Administration-Guide#concept-template_2812e465-bde2-4bf8-b133-b64bbddff95b){:target="\_blank"}
 
 ---
 
