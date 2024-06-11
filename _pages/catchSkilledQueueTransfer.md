@@ -57,7 +57,7 @@ name="answeredQueueID"
 type="String"
 defaultValue=""
 input="true"
-output="false"
+output="true"
 sensitive="false"
 %}
 
@@ -142,7 +142,7 @@ falseLink="Connect to the end subflow node"
 <!-- Escape brackets \{\{ variable \}\} -->
 {% include_relative _parts/setVariable.md
 name="answeredQueueID"
-value="\{\{\}\}"
+value="*"
 nodeExit="Connect to end subflow node"
 %}
 
@@ -167,7 +167,7 @@ editable="false"
 {% include_relative _parts/flowVariable.md
 name="answeredQueueID"
 type="String"
-defaultValue=""
+defaultValue="*"
 viewable="false"
 editable="false"
 %}
@@ -224,7 +224,7 @@ editable="false"
 {% include_relative _parts/flowVariable.md
 name="answeredQueueID"
 type="String"
-defaultValue=""
+defaultValue="*"
 viewable="false"
 editable="false"
 %}
@@ -245,7 +245,7 @@ nodeExit="Connect to an end flow node"
 ### Add a Condition node after your Queue Contact node(s)
 <!-- Escape brackets \{\{ variable \}\} -->
 {% include_relative _parts/condition.md
-expression="\{\{ answeredQueueID is empty \}\}"
+expression="\{\{ answeredQueueID == \"*\" \}\}"
 trueLink="Connect to the node which was previously connected to the Queue Contact node"
 falseLink="Connect to the new subflow node which is added in the next step"
 %}
@@ -261,7 +261,7 @@ inputVar='Current Flow Variable:AT,Subflow Output Variable:AT,
 ^ Current Flow Variable:answeredQueueID,Subflow Output Variable:answeredQueueID,
 ^ Current Flow Variable:NewPhoneContact.interactionId,Subflow Output Variable:sessionID,
 _done!_'
-outputVar='Current Flow Variable:queueTo,Subflow Output Variable:QueueTo,
+outputVar='Current Flow Variable:queueTo,Subflow Output Variable:queueTo,
 ^ Current Flow Variable:answeredQueueID,Subflow Output Variable:answeredQueueID,
 _done!_'
 nodeExit="Connect to the Condition node created in the next step"
@@ -272,7 +272,7 @@ nodeExit="Connect to the Condition node created in the next step"
 ### Add another Condition node (or copy the previous one)
 <!-- Escape brackets \{\{ variable \}\} -->
 {% include_relative _parts/condition.md
-expression="\{\{ answeredQueueID is empty \}\}"
+expression="\{\{ answeredQueueID == \"*\" \}\}"
 trueLink="Connect to the node which was previously connected to the Queue Contact node"
 falseLink="Go To node which will be added in the next step"
 %}
