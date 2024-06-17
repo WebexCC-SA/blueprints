@@ -577,5 +577,15 @@
 		  ""
 		],
 		"description": "BRE"
+	  },
+	  "blindTransfer": {
+		"prefix": "blindTransfer",
+		"body": [
+		  "{% include_relative _parts/blindTransfer.md",
+		  "type=\"${1|Specific,Variable|}\"",
+		  "DN=\"${2:}\"",
+		  "%}"
+		],
+		"description": "blindTransfer"
 	  }
 	}
