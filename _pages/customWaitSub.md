@@ -20,7 +20,7 @@ Create a subflow which will do a BRE lookup based on the queue ID and return the
 ## Required Components
 - Subflow
 - BRE
--   - CSV file with JSON provided for demo/testing via a link in the testing section
+   - CSV file with JSON provided for demo/testing via a link in the testing section
 - Parse node
 - Prerecorded message for selecting queue/treatment, opt-out to receive a callback, and callback confirmation
 - Prerecorded messages for the different LOBs with the order in which they should be played formatted like LOB_1,LOB_2,LOB_3,etc

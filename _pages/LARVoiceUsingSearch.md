@@ -5,7 +5,7 @@ layout: post
 created: 06/10/2024
 updated: 
 mermaid: true
-status: draft
+status: live
 ---
 
 ## Problem
@@ -119,7 +119,7 @@ _done!_'
 requestContentType="Application/JSON"
 fileContent="variable name"
 body='\{"query":"query LARwithLOB($from:Long! $to:Long! $timeComparator:QueryTimeType $filter:TaskFilters)\{task(from:$from,to:$to,timeComparator:$timeComparator,filter:$filter)\{tasks\{id owner\{id\}\}\}\}","variables":\{"from":"\{\{now()|epoch (inMillis=true) - LARLookback \}\}","to":"\{\{now()|epoch (inMillis=true)\}\}","timeComparator":"createdTime","filter":\{"and":[\{"stringGlobalVariables":\{"name":\{"equals":"LOB"\},"value":\{"equals":"\{\{LOB\}\}"\}\}\},\{"owner":\{"id":\{"notequals":null\}\}\},\{"origin":\{"equals":"\{\{ani\}\}"\}\}]\}\}\}'
-timeout="2000"
+timeout="7000"
 retries="1"
 responseContentType="JSON"
 parse='
@@ -343,5 +343,24 @@ nodeExit="Loop to the beginning of this Play Music node"
 ## Testing
 
 ### Setup
+Setup at least one agent in a team which is assigned to the Sales queue and not assigned to Service queue.
 
 ### MoP
+- With the agent logged in and available, call the mapped number and select Sales when prompted
+  - The agent will be delivered the call
+  - After the call ends, use the flow debugger to see that there was no agent routing attempted
+- With the agent logged in and available, call the mapped number and select Sales when prompted
+  - The agent will be delivered the call
+  - After the call ends, use the flow debugger to see that the call was routed using Queue to Agent
+- With the agent logged out, call the mapped number and select Sales when prompted
+  - Abandon the call and use the flow debugger to see that the call attempted routing to the agent, but the agent was not logged in.  This caused it to fail over to the case node and route to the Sales queue.
+- With the agent logged back in and in a not ready status, call the mapped number and select Sales when prompted
+  - Have the agent go available
+  - The agent will be delivered the call via queue to agent as the last connected call from your number was owned by the agent.  You can confirm with the flow debugger.
+- With the agent logged in and not available, call the mapped number and select Sales when prompted
+  - Abandon the call when the hold music changes
+  - The call was held for the agent for the duration of the first hold music before being assigned to the Sales queue.
+- With the agent logged in and available, call the mapped number and select Service when prompted
+  - Note that the call is not offered to the agent as the call was for a different Line of Business 
+
+---

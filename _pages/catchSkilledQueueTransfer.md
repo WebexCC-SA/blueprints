@@ -117,7 +117,7 @@ _done!_'
 requestContentType="Application/JSON"
 fileContent="variable name"
 body='\{"query":"query queueCheck($from:Long! $to:Long! $timeComparator:QueryTimeType $filter:TaskDetailsFilters)\{taskDetails(from:$from to:$to timeComparator:$timeComparator filter:$filter)\{tasks\{id requiredSkills lastQueue\{id\}\}\}\}","variables":\{"from":"\{\{now() | epoch(inMillis=true) - 86400000 \}\}","to":"\{\{now() | epoch(inMillis=true)\}\}","timeComparator":"createdTime","filter":\{"and":[\{"channelType":\{"equals":"telephony"\}\},\{"id":\{"equals":"\{\{sessionID\}\}"\}\}]\}\}\}'
-timeout="2000"
+timeout="7000"
 retries="1"
 responseContentType="JSON"
 parse='
