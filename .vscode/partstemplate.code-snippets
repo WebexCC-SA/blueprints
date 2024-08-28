@@ -587,5 +587,23 @@
 		  "%}"
 		],
 		"description": "blindTransfer"
-	  }
+	  },
+	  "GetQueueInfo": {
+		"prefix": "GetQueueInfo",
+		"body": [
+			"{% include_relative _parts/getQueueInfo.md",
+			"queueMethod=\"${1|Variable,Static|}\"",
+			"nameOrVar=\"${2:name of queue or variable}\"",
+			"lookbackTime=\"${3:5}\"",
+			"nodeExit=\"${4:}\"",
+			"InsufficientInfo=\"${5:}\"",
+			"failure=\"${6:}\"",
+			"%}",
+			"",
+			"---",
+			"",
+			"${7:}"
+		],
+		"description": "GetQueueInfo"
+		}
 	}
