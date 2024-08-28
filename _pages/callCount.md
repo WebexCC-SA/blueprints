@@ -5,7 +5,7 @@ layout: post
 created: 08/28/2024
 updated: 
 mermaid: true
-status: draft
+status: live
 ---
 
 ## Problem
@@ -76,14 +76,13 @@ sensitive="false"
 {% include_relative _parts/setVariable.md
 name="qToCheck"
 value='\{\{ \ (queueList | split(","))[counter] \}\}'
-nodeExit="GetQueueInfo node created in next step"
+nodeExit="Get Queue Info node created in next step"
 %}
 
 ---
 
 ### Add a Get Queue Info node
 
-Get queue info node
 {% include_relative _parts/getQueueInfo.md
 queueMethod="Variable"
 nameOrVar="qToCheck"
