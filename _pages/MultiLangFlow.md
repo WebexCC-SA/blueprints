@@ -43,6 +43,7 @@ Will be using static wav files.
 {% include_relative _parts/setVariable.md  
 name="lang"
 value="SP"
+nodeExit="Connect to the Play message node created in a later step."
 %}
 
 
@@ -52,6 +53,7 @@ value="SP"
 {% include_relative _parts/setVariable.md  
 name="lang"
 value="FR"
+nodeExit="Connect to the Play message node created in a later step."
 %}
 
 ---
