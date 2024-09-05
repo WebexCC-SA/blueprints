@@ -112,7 +112,7 @@ connector="na"
 requestPath="https://api.wxcc-us1.cisco.com/search"
 method="POST"
 params='
-Key:thisKey,orgIdValue:Your Org ID
+Key:orgId,orgIdValue:Your Org ID
 _done!_'
 headers='
 Key:Authorization,Value:Bearer \{\{AT\}\}
