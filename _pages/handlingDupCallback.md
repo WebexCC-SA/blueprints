@@ -188,7 +188,7 @@ Key:Authorization,Value:Bearer \{\{AT\}\}
 _done!_'
 requestContentType="Application/JSON"
 fileContent="variable name"
-body='\{"query":"query PIQlist($from:Long! $to:Long! $timeComparator:QueryTimeType $filter:TaskFilters)\{task(from:$from,to:$to,timeComparator:$timeComparator,filter:$filter)\{tasks\{id\}\}\}","variables":\{"from":"\{\{now()|epoch (inMillis=true) - 86400000 \}\}","to":"\{\{now()|epoch (inMillis=true)\}\}","filter":\{"and":[\{"origin":\{"equals":"\{\{ANI\}\}"\}\},"timeComparator":"createdTime","filter":\{"and":[\{"isActive":\{"equals":true\}\},\{"lastQueue":\{"id":\{"equals":"\{\{queueID\}\}"\}\}\}]\}\}\}'
+body='\{"query":"query PIQlist($from:Long! $to:Long! $timeComparator:QueryTimeType $filter:TaskFilters)\{task(from:$from,to:$to,timeComparator:$timeComparator,filter:$filter)\{tasks\{id\}\}\}","variables":\{"from":"\{\{now()|epoch (inMillis=true) - 86400000 \}\}","to":"\{\{now()|epoch (inMillis=true)\}\}","timeComparator":"createdTime","filter":\{"and":[\{"isActive":\{"equals":true\}\},\{"lastQueue":\{"id":\{"equals":"\{\{queueID\}\}"\}\}\}]\}\}\}'
 timeout="2000"
 retries="1"
 responseContentType="JSON"
