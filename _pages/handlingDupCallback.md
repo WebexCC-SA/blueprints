@@ -205,7 +205,7 @@ nodeExit="Connect to the Set Variable node you create in the next step of the me
 <!-- Escape brackets \{\{ variable \}\} -->
 {% include_relative _parts/setVariable.md
 name="position"
-value="\{\{ list | split(TaskID) | first | split(\",\") | length \}\}"
+value="\{\{ list | split(TaskID) | last | split(\",\") | length \}\}"
 nodeExit="Connect to the Play Message node created in the next step of the method"
 %}
 
